@@ -6,9 +6,9 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "https://vitejs.dev/logo.svg" }]],
   description: "基于vite的一个开箱即用的脚手架 create-wl-app",
   lang: "zh-CN",
+  base: "/cwa-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    base: "/repo/",
     logo: "https://vitejs.dev/logo.svg",
     nav: [
       { text: "首页", link: "/" },
