@@ -1,0 +1,163 @@
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
+hero:
+  name: create-wl-app
+  text: 一个开箱即用的脚手架
+  tagline: 为开发提供极速响应的开发体验
+  image:
+    src: https://cn.vitejs.dev/logo-with-shadow.png
+    alt: Vite
+  actions:
+    - theme: brand
+      text: 1分钟⏱️ 快速搭建项目模板
+      link: /intro
+
+features:
+  - title: 使用简单
+    details: 在线上验证过，完善配置，快速构建模板，方便实用。无需繁琐配置，专注业务开发，提高效率。
+  - title: 专注于重要的事情
+    details: 无需底层配置，专注业务逻辑。脚手架处理完善，快速开发，提高效率，专注核心业务。
+  - title: 支持React、Vue3
+    details: 提供React和Vue3模板，含全家桶配置。根据需求选择模板，快速搭建项目，专注业务开发。
+---
+
+<style>
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand) !important;
+}
+
+/**
+ * VitePress: Custom fix
+ * -------------------------------------------------------------------------- */
+
+/*
+  Use lighter colors for links in dark mode for a11y.
+  Also specify some classes twice to have higher specificity
+  over scoped class data attribute.
+*/
+.dark .vp-doc a,
+.dark .vp-doc a > code,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink:hover,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink.active,
+.dark .link.link:hover,
+.dark .link.link.active,
+.dark .edit-link-button.edit-link-button,
+.dark .pager-link .title {
+  color: var(--vp-c-brand-lighter);
+}
+
+.dark .vp-doc a:hover,
+.dark .vp-doc a > code:hover {
+  color: var(--vp-c-brand-lightest);
+  opacity: 1;
+}
+
+/* Transition by color instead of opacity */
+.dark .vp-doc .custom-block a {
+  transition: color 0.25s;
+}
+
+.vp-sponsor.aside .vp-sponsor-grid.mini .vp-sponsor-grid-image {
+  max-width: 124px;
+}
+
+.vp-sponsor-grid.big .vp-sponsor-grid-image {
+  max-height: 96px;
+}
+
+.vp-sponsor-grid.mini .vp-sponsor-grid-image[alt='Bit'] {
+  max-height: 48px;
+}
+
+.vp-sponsor-grid.xmini .vp-sponsor-grid-image[alt='JetBrains'] {
+  max-height: 54px;
+}
+
+.vp-sponsor-grid.medium .vp-sponsor-grid-image[alt='JetBrains'] {
+  max-height: 100px;
+}
+</style>
