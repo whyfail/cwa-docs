@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2024-01-10.md" },
+      { text: "更新日志", link: "/log/2024-09-04.md" },
     ],
 
     sidebar: {
@@ -32,6 +32,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "2024-09-04",
+              link: "/log/2024-09-04.md",
+            },
             {
               text: "2024-01-10",
               link: "/log/2024-01-10.md",
