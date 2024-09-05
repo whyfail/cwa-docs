@@ -37,6 +37,10 @@ export default defineConfig({
               link: "/log/2024-09-04.md",
             },
             {
+              text: "2024-09-01",
+              link: "/log/2024-09-01.md",
+            },
+            {
               text: "2024-01-10",
               link: "/log/2024-01-10.md",
             },
