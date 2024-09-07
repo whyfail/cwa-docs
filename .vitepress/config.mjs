@@ -18,6 +18,13 @@ export default defineConfig({
     ],
     search: {
       provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "搜索文档",
+          },
+        },
+      },
     },
     sidebar: {
       "/core/": [
@@ -109,5 +116,21 @@ export default defineConfig({
         link: "https://why404.blog.csdn.net/",
       },
     ],
+    // 文章翻页
+    docFooter: {
+      prev: "上一篇",
+      next: "下一篇",
+    },
+    darkModeSwitchTitle: "切换到深色模式",
+    lightModeSwitchTitle: "切换到浅色模式",
+    outlineTitle: "在此页",
+    // 移动端 - 外观
+    darkModeSwitchLabel: "外观",
+
+    // 移动端 - 返回顶部
+    returnToTopLabel: "返回顶部",
+
+    // 移动端 - menu
+    sidebarMenuLabel: "菜单",
   },
 })
