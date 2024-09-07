@@ -33,59 +33,59 @@ export default defineConfig({
           text: "更新日志",
           items: [
             {
-              text: "2024-09-04",
+              text: "宣布 Vue 3.5 版发布",
               link: "/log/2024-09-04.md",
             },
             {
-              text: "2024-09-01",
+              text: "点击路由页面刷新问题",
               link: "/log/2024-09-01.md",
             },
             {
-              text: "2024-01-10",
+              text: "项目中添加了 vue-hooks-plus",
               link: "/log/2024-01-10.md",
             },
             {
-              text: "2023-11-14",
+              text: "项目中添加了 unocss",
               link: "/log/2023-11-14.md",
             },
             {
-              text: "2023-10-17",
+              text: "关于如何移除 pxtorem 的配置",
               link: "/log/2023-10-17.md",
             },
             {
-              text: "2023-07-24",
+              text: "React 模板 添加 clsx 库",
               link: "/log/2023-07-24.md",
             },
             {
-              text: "2023-07-03",
+              text: "添加路由登录权限校验",
               link: "/log/2023-07-03.md",
             },
             {
-              text: "2023-06-30",
+              text: "Vue3 模板 添加新调试工具库 (已弃用)",
               link: "/log/2023-06-30.md",
             },
             {
-              text: "2023-05-24",
+              text: "React 模板更换全局状态库",
               link: "/log/2023-05-24.md",
             },
             {
-              text: "2023-05-19",
+              text: "目录规范化",
               link: "/log/2023-05-19.md",
             },
             {
-              text: "2023-04-23",
+              text: "Vite 4.3 is out!",
               link: "/log/2023-04-23.md",
             },
             {
-              text: "2023-04-20",
+              text: "添加引入排序自动格式化插件",
               link: "/log/2023-04-20.md",
             },
             {
-              text: "2023-04-14",
+              text: "修改压缩模式",
               link: "/log/2023-04-14.md",
             },
             {
-              text: "2023-04-13",
+              text: "添加 css 兼容性插件",
               link: "/log/2023-04-13.md",
             },
           ],
