@@ -5,7 +5,7 @@ export default defineConfig({
   title: "create-wl-app",
   head: [["link", { rel: "icon", href: "https://vitejs.dev/logo.svg" }]],
   description: "基于vite的一个开箱即用的脚手架 create-wl-app",
-  lang: "zh-CN",
+  lang: "zh",
   base: "/cwa-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -16,7 +16,9 @@ export default defineConfig({
       { text: "核心功能", link: "/core/脚手架核心.md" },
       { text: "更新日志", link: "/log/2024-09-04.md" },
     ],
-
+    search: {
+      provider: "local",
+    },
     sidebar: {
       "/core/": [
         {
