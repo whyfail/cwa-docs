@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2024-09-04.md" },
+      { text: "更新日志", link: "/log/2024-10-08.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "pinia 状态持久化",
+              link: "/log/2024-10-08.md",
+            },
             {
               text: "宣布 Vue 3.5 版发布",
               link: "/log/2024-09-04.md",
