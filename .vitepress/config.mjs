@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2024-11-28.md" },
+      { text: "更新日志", link: "/log/2024-12-24.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "Auto Decimal插件",
+              link: "/log/2024-12-24.md",
+            },
             {
               text: "Vite 6.0 发布了！ (转发)",
               link: "/log/2024-11-28.md",
