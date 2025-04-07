@@ -14,7 +14,7 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 ## 页面适配方案
 
-- 移除适配方法在[这里](/log/2023-10-17)
+- 移除/禁用适配方法在[这里](/log/2023-10-17)
 - 统一采用的都用的是：`postcss-pxtorem` 这个插件来实现 `px` 转 `rem` 来做页面适配方案；
 - 改变窗口大小时重新设置 `rem` 的方法是在 [src/common/common-set-rem.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/common/common-set-rem.js) 文件中，然后在 [src/App.jsx](https://gitee.com/whyfail/vite_react_init/blob/master/src/App.jsx) 中调用；
 
