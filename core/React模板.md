@@ -11,13 +11,11 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 - 浏览器语法兼容性以 `@vitejs/plugin-legacy` 配置为准；
 - CSS 兼容性，项目中都采用了 `autoprefixer` 作为自动添加各个浏览器 CSS 前缀，配置统一是在 `vite.config.js` 中配置；
-  - 在**React**项目中，因为采用了 `react-jss` 作为样式库，所以另外添加了 `react-jss` 的 `jss-plugin-vendor-prefixer` 插件，作为浏览器 CSS 样式兼容处理，配置位置在：[src/common/common-jss-plugin.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/common/common-jss-plugin.js)；
 
 ## 页面适配方案
 
 - 移除/禁用适配方法在[这里](/log/2023-10-17)
 - 统一采用的都用的是：`postcss-pxtorem` 这个插件来实现 `px` 转 `rem` 来做页面适配方案；
-  - 在**React**项目中，因为采用了 `react-jss` ，是 `CSS-In-JS` 方案，所以无法采用 `postcss-pxtorem` 来实现单位转换，这里我手写了个单位转换插件，并挂载到了 `react-jss` 上，插件位置在：[src/common/common-jss-plugin.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/common/common-jss-plugin.js)
 - 改变窗口大小时重新设置 `rem` 的方法是在 [src/common/common-set-rem.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/common/common-set-rem.js) 文件中，然后在 [src/App.jsx](https://gitee.com/whyfail/vite_react_init/blob/master/src/App.jsx) 中调用；
   - 因为项目中采用的 UI 库是 `antd5` ，而 `antd5` 库采用的也是 `CSS-In-JS` 方案，所以`postcss-pxtorem` 这个插件也是没有办法修改它的样式单位，所以在 [src/App.jsx](https://gitee.com/whyfail/vite_react_init/blob/master/src/App.jsx) 中进行手动修改 `antd5` 样式单位。
 
@@ -29,4 +27,4 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 - ~~`mobx`: React 项目中采用了 `Mobx` 作为全局状态管理库，使用起来也非常的简单易用，在[src/store/storeOther.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/store/storeOther.js) 文件中给出了示例状态模块化，统一由[src/store/index.js](https://gitee.com/whyfail/vite_react_init/blob/master/src/store/index.js) 文件中导出使用，在 [src/components/index.jsx](https://gitee.com/whyfail/vite_react_init/blob/master/src/components/index.jsx)文件中给出了使用示例，注意点就是一定要用 `observer` 来包括组件，达到组件响应式。~~
 - ~~`Recoil`: React 项目中采用了 `Recoil` 作为全局状态管理库，Recoil 库同样使用起来很简单，上手简单，和使用 useState 基本一样，所以没有什么使用上的压力，使用方式可以参考 [这里](/log/2023-05-24)~~。
 - `zustand`: React 项目中采用了 `zustand` 作为全局状态管理库。
-- `react-jss`：一个 `CSS-IN-JSS` 库，因为 React 没有像 Vue 中的 `<style scoped>` 语法，没法隔离样式，所以采用了 `react-jss` 库来实现同一文件中写样式并样式隔离，在 [src/components/index.jsx](https://gitee.com/whyfail/vite_react_init/blob/master/src/components/index.jsx) 文件中给出了示例代码。
+- `antd-style`：一个 `CSS-IN-JSS` 库，因为 React 没有像 Vue 中的 `<style scoped>` 语法，没法隔离样式，所以采用了 `antd-style` 库来实现同一文件中写样式并样式隔离，使用方式可以参考 [这里](https://ant-design.github.io/antd-style/zh-CN/guide)。
