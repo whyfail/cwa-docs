@@ -7,7 +7,7 @@ hero:
   text: 一个开箱即用的脚手架
   tagline: 为开发提供极速响应的开发体验
   image:
-    src: https://cn.vitejs.dev/logo-with-shadow.png
+    src: /logo.png
     alt: Vite
   actions:
     - theme: brand

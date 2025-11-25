@@ -3,18 +3,18 @@ import { defineConfig } from "vitepress"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "create-wl-app",
-  head: [["link", { rel: "icon", href: "https://vitejs.dev/logo.svg" }]],
+  head: [["link", { rel: "icon", href: "/cwa-docs/favicon.ico" }]],
   description: "基于vite的一个开箱即用的脚手架 create-wl-app",
   lang: "zh",
   base: "/cwa-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "https://vitejs.dev/logo.svg",
+    logo: "/logo.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2025-01-10.md" },
+      { text: "更新日志", link: "/log/2025-11-25.md" },
     ],
     search: {
       provider: "local",
