@@ -42,6 +42,10 @@ export default defineConfig({
           text: "更新日志",
           items: [
             {
+              text: "升级Ant Design 6.0",
+              link: "/log/2025-11-25.md",
+            },
+            {
               text: "zustand",
               link: "/log/2025-01-10.md",
             },
