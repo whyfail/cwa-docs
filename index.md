@@ -7,7 +7,7 @@ hero:
   text: 一个开箱即用的脚手架
   tagline: 为开发提供极速响应的开发体验
   image:
-    src: /logo.png
+    src: https://github.com/whyfail/cwa-docs/blob/master/logo.png?raw=true
     alt: Vite
   actions:
     - theme: brand

@@ -3,13 +3,13 @@ import { defineConfig } from "vitepress"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "create-wl-app",
-  head: [["link", { rel: "icon", href: "/cwa-docs/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "https://github.com/whyfail/cwa-docs/blob/master/favicon.ico?raw=true" }]],
   description: "基于vite的一个开箱即用的脚手架 create-wl-app",
   lang: "zh",
   base: "/cwa-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/logo.png",
+    logo: "https://github.com/whyfail/cwa-docs/blob/master/logo.png?raw=true",
     nav: [
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
