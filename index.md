@@ -77,4 +77,4 @@ features:
 
 🎉 **立即开始使用 create-wl-app，体验现代化前端开发的极致快感！**
 
-📚 [查看文档](/core/) | ⭐ [GitHub 仓库](https://github.com/whyfail/create-wl-app) 
+📚 [查看文档](/core/脚手架核心.md) | ⭐ [GitHub 仓库](https://github.com/whyfail/create-wl-app) 
