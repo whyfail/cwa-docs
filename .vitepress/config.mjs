@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2025-11-25.md" },
+      { text: "更新日志", link: "/log/2026-01-22.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "🚀 Vite 8.0 换代革命",
+              link: "/log/2026-01-22.md",
+            },
             {
               text: "升级Ant Design 6.0",
               link: "/log/2025-11-25.md",
