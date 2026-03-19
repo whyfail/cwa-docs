@@ -7,7 +7,7 @@ hero:
   text: 🚀 现代化前端脚手架
   tagline: 开箱即用，极速响应，让开发更简单、更高效！
   image:
-    src: https://github.com/whyfail/cwa-docs/blob/master/logo.png?raw=true
+    src: /logo.png
     alt: create-wl-app Logo
     width: 200
     height: 200
