@@ -9,12 +9,12 @@ export default defineConfig({
   base: "/cwa-docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "https://github.com/whyfail/cwa-docs/blob/master/logo.png?raw=true",
+    logo: "logo.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2026-03-06.md" },
+      { text: "更新日志", link: "/log/2026-03-19.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "React Grab 使用文档",
+              link: "/log/2026-03-19.md",
+            },
             {
               text: "AI Skills 集成更新",
               link: "/log/2026-03-06.md",
