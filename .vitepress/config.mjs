@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "更新日志", link: "/log/2026-03-19.md" },
+      { text: "🔥 更新日志", link: "/log/2026-04-20.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "🔥 Vite 8 + React 19 依赖库全面升级",
+              link: "/log/2026-04-20.md",
+            },
             {
               text: "React Grab 使用文档",
               link: "/log/2026-03-19.md",
