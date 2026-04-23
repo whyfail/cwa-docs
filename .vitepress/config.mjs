@@ -42,8 +42,12 @@ export default defineConfig({
           text: "更新日志",
           items: [
             {
-              text: "🔥 依赖库升级：Vue 3.5.33、React Router 7.14.2 等",
+              text: "2026-04-23",
               link: "/log/2026-04-23.md",
+            },
+            {
+              text: "2026-04-20",
+              link: "/log/2026-04-20.md",
             },
             {
               text: "React Grab 使用文档",
