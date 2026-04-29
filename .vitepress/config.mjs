@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "🔥 更新日志", link: "/log/2026-04-23.md" },
+      { text: "🔥 更新日志", link: "/log/2026-04-29.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "2026-04-29",
+              link: "/log/2026-04-29.md",
+            },
             {
               text: "2026-04-23",
               link: "/log/2026-04-23.md",
