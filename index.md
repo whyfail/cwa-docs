@@ -31,7 +31,7 @@ features:
     details: 基于 Rust 编写的下一代构建引擎，秒级冷启动与热更新，构建速度提升 10x+，让开发体验飞起来！
   - title: 🎨 现代化技术栈
     icon: 🎨
-    details: 集成 React 19、Vue 3、ESLint 等前沿技术，提供最佳实践配置，无需从零开始。
+    details: 集成 React 19、Vue 3、TypeScript、ESLint 等前沿技术，提供最佳实践配置，无需从零开始。
   - title: 📦 开箱即用
     icon: 📦
     details: 内置完整的项目结构、路由、状态管理、UI 组件库等，无需复杂配置，专注业务逻辑开发。
