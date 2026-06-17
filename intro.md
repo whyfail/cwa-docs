@@ -153,15 +153,15 @@ my-awesome-app/
 ```
 my-awesome-app/
 ├── src/
-│   ├── assets/        # 静态资源
-│   ├── components/    # 通用组件
-│   ├── common/        # 公共工具
-│   ├── stores/        # 状态管理（Pinia）
-│   ├── pages/         # 页面组件
-│   ├── routes/        # 路由配置
-│   ├── types/         # 全局类型补充
-│   ├── App.vue        # 根组件
-│   └── main.ts        # 入口文件
+│   ├── app/           # 应用装配、路由、通知、导航、全局样式
+│   ├── features/      # 业务功能模块，如 auth、docs
+│   ├── shared/        # 跨业务基础能力，如 ui、api、lib、config
+│   ├── main.ts        # 入口文件
+│   ├── vite-env.d.ts  # Vite 类型声明
+│   └── vue-router-meta.d.ts # 路由 meta 类型声明
+├── .agents/skills/    # AI Agent 项目技能
+├── AGENTS.md          # AI 协作规则
+├── components.json    # shadcn-vue 配置
 ├── eslint.config.mjs  # ESLint 配置
 ├── vite.config.ts     # Vite 配置
 ├── tsconfig.json      # TypeScript 配置

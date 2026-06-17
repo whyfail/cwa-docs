@@ -3,76 +3,59 @@ sidebar_position: 4
 keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
 ---
 
-# 🚀 Vue3 模板 —— 现代化前端开发的最佳选择
+# 🚀 Vue3 模板 —— 为 AI 而生的企业级项目模板
 
 [![小磊丶同学/vite_vue3_init](https://gitee.com/whyfail/vite_vue3_init/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/whyfail/vite_vue3_init)
 
 ## 🌟 核心优势
 
-- ✅ **开箱即用** - 无需复杂配置，一键生成生产级Vue3项目
-- ⚡ **极致性能** - 基于Vite 8 + Rolldown，构建速度飞起来
-- 🎨 **现代化技术栈** - 集成Vue3生态最优质的依赖库
-- 🔧 **开发友好** - 内置丰富的开发工具，提升开发效率
-- 📱 **完美适配** - 自动适配各种屏幕尺寸
+- ✅ **AI 友好** - 内置 AGENTS.md、docs 模块和 shadcn-vue skill，方便 AI Agent 快速理解项目边界
+- ✅ **企业级分层** - `app`、`features`、`shared` 分层清晰，默认避免业务代码散落
+- ⚡ **极致性能** - 基于 Vite 8 + Rolldown，构建速度飞起来
+- 🎨 **现代化 UI 栈** - 使用 shadcn-vue + Tailwind CSS + Heroicons 组织界面能力
+- 🔧 **开发友好** - 内置路由守卫、认证 session、API 封装、通知适配和代码规范
 
 ## 🛠️ 技术栈亮点
 
 ### 🔌 核心框架
-- **Vue 3** - 最新稳定版，带来Composition API、Teleport、Suspense等强大特性
-- **Vite 8** - 下一代前端构建工具，基于Rolldown引擎，速度飙升
-- **TypeScript** - 默认使用 `.ts` 与 `<script setup lang="ts">`，增强类型约束和编辑器提示
+
+- **Vue 3.5** - 使用 Composition API 与 `<script setup lang="ts">` 作为默认组件范式
+- **Vite 8** - 下一代前端构建工具，基于 Rolldown 引擎，速度飙升
+- **TypeScript** - 默认使用 `.ts` 与 Vue SFC 类型检查，提供更清晰的类型约束
+- **Vue Router 5** - feature 暴露 routes，由 `src/app/routes` 聚合
 
 ### 🎯 状态管理
-- **Pinia** - Vue3官方推荐状态管理库，API简洁，性能卓越
-  - 原生支持Vue DevTools
-  - 内置TypeScript支持
-  - 模块化设计，易于扩展
-  - 自带状态变更日志打印功能
 
-### 🎨 UI组件库
-- **Element Plus** - 企业级UI组件库，丰富的组件，优雅的设计
-  - 基于Vue3开发，完美支持Composition API
-  - 按需引入，减小打包体积
-  - 支持主题定制
+- **Pinia** - Vue 官方推荐状态管理库，应用级注册位于 `src/app/stores`
+- **pinia-plugin-persistedstate** - 支持 session 等状态持久化能力
 
-### 📱 页面适配
-- **autofit.js** - 自动适配不同屏幕尺寸，无需手动配置
-- **autoprefixer** - 自动添加CSS前缀，确保浏览器兼容性
+### 🎨 UI 与样式
+
+- **shadcn-vue** - 基础组件源码统一放在 `src/shared/ui`，业务组件留在各自 feature
+- **Tailwind CSS 4** - 默认样式表达方式，替代旧 UnoCSS 配置
+- **Heroicons Vue** - 从 `@heroicons/vue/24/outline` 按需导入业务图标
+- **reka-ui** - 作为 shadcn-vue 复杂交互组件的无障碍底层能力
+- **vue-sonner** - Toast 通知组件，业务侧通过 `src/app/notifications` 调用
+
+### 🔄 网络请求
+
+- **axios** - 统一封装在 `src/shared/api/http.ts`，负责 token 注入、响应解包和错误处理
+- **app/navigation** - 统一处理未授权跳转和登录过期逻辑
+- **features/auth/session** - token 读写只从认证模块边界进入
+
+### 🧭 默认模块
+
+- **auth** - 登录页、OGL 背景、session token 读写和认证相关接口
+- **docs** - 登录后的默认入口，用于说明项目结构、核心库职责和开发约定
+- **shared/ui** - shadcn-vue primitives，只放基础组件，不放业务逻辑
+- **.agents/skills/shadcn-vue** - 内置 shadcn-vue Agent skill，提升 AI 操作组件时的稳定性
 
 ### 🛠️ 开发工具
-- **vite-plugin-vue-devtools** - 强大的Vue3开发调试工具
-  - 替代传统vue-devtool，功能更强大
-  - 支持代码跳转功能
-  - 实时查看组件树和状态
 
-```js
-import { defineConfig } from "vite"
-import VueDevTools from "vite-plugin-vue-devtools"
-
-export default defineConfig({
-  base: "./",
-  plugins: [VueDevTools()],
-})
-```
-
-- **unplugin-element-plus** - Element Plus 按需引入样式插件
-  - 自动按需导入Element Plus组件样式
-  - 减小打包体积
-  - 提高开发效率
-
-```js
-import { defineConfig } from "vite"
-import ElementPlus from "unplugin-element-plus/vite"
-
-export default defineConfig({
-  base: "./",
-  plugins: [
-    ElementPlus({
-      useSource: true,
-    }),
-  ],
-})
-```
+- **vite-plugin-vue-devtools** - 通过 `VITE_ENABLE_VUE_DEVTOOLS=true` 开启 Vue DevTools 插件
+- **@vitejs/devtools** - 通过 `VITE_ENABLE_DEVTOOLS=true` 开启 Vite DevTools
+- **code-inspector-plugin** - 通过 `VITE_ENABLE_CODE_INSPECTOR=true` 开启浏览器到 IDE 的代码定位
+- **ESLint + vue-tsc** - 提交前建议执行 lint、typecheck 和 build 三道验证
 
 ## 🚀 快速开始
 
@@ -86,7 +69,7 @@ npx create-wl-app create
 
 ? 请输入项目名称 my-vue3-app
 
-? 请输入项目描述 一个基于Vue3的现代化项目模板
+? 请输入项目描述 一个基于 Vue3 的企业级项目模板
 
 ✔ 项目生成中...
 
@@ -105,141 +88,86 @@ pnpm run dev
 pnpm run build
 ```
 
-## 📋 兼容性说明
-
-- **浏览器支持** - 基于`@vitejs/plugin-legacy`配置，支持主流浏览器
-- **CSS兼容性** - 自动添加浏览器前缀，确保跨浏览器一致性
-- **响应式设计** - 完美适配移动端、平板和桌面端
-
 ## 💡 最佳实践
 
-1. **组件设计** - 优先使用Composition API，组件代码更简洁
-2. **状态管理** - 使用Pinia管理全局状态，遵循模块化设计
-3. **样式开发** - 使用scoped样式，避免样式冲突
-4. **代码规范** - 遵循ESLint规则，提交前自动检查
-5. **类型检查** - 提交前执行 `pnpm run typecheck` 和 `pnpm run lint`
-6. **性能优化** - 合理使用v-memo、v-once等指令优化渲染性能
+1. **模块归属** - 新业务放到 `src/features/<name>`，页面、组件、接口和 store 跟随 feature
+2. **应用组合** - 路由、通知、导航、全局样式和全局 store 注册放在 `src/app`
+3. **共享能力** - 跨业务 API、工具函数、运行配置和基础组件放在 `src/shared`
+4. **样式开发** - 默认使用 Tailwind CSS；全局样式只放 `src/app/styles`
+5. **AI 协作** - 项目规则写入 AGENTS.md，新增目录前先确认业务或能力归属
+6. **质量验证** - 提交前执行 `pnpm lint`、`pnpm typecheck`、`pnpm build`
 
 ## 📁 TypeScript 项目结构
 
-```
+```txt
 src/
-├── apis/              # API 接口管理
-├── directive/         # 自定义指令
-├── routes/            # 路由配置
-├── stores/            # Pinia 状态管理
-├── types/             # 全局类型补充
-├── App.vue            # 根组件
-├── main.ts            # 入口文件
-├── shims-vue.d.ts     # Vue 模块声明
-├── vite-env.d.ts      # Vite 环境声明
-└── vue-router-meta.d.ts # 路由 meta 类型声明
+├── app/                  # 应用装配、路由、通知、导航、全局样式
+│   ├── routes/           # 路由聚合、守卫、类型
+│   ├── stores/           # 全局状态注册
+│   ├── styles/           # Tailwind 与全局样式
+│   ├── App.vue
+│   └── setup.ts
+├── features/             # 业务功能模块
+│   ├── auth/             # 登录、session、认证接口
+│   └── docs/             # 模板文档页
+├── shared/               # 跨业务基础能力
+│   ├── api/              # HTTP client
+│   ├── components/       # 非 shadcn 的共享组件
+│   ├── config/           # 运行配置
+│   ├── lib/              # 工具函数
+│   └── ui/               # shadcn-vue primitives
+├── main.ts
+└── vite-env.d.ts
 ```
+
+## ⚙️ 环境变量
+
+```txt
+VITE_APP_NAME="初始化项目"
+VITE_API_BASE="/API_BASE"
+VITE_API_TARGET="http://xxxx"
+VITE_ENABLE_VUE_DEVTOOLS=true
+VITE_ENABLE_DEVTOOLS=false
+VITE_ENABLE_CODE_INSPECTOR=false
+VITE_ENABLE_COMPRESSION=true
+VITE_ENABLE_LEGACY=true
+VITE_ENABLE_WEB_UPDATE_NOTICE=false
+```
+
+## 🧩 shadcn-vue
+
+配置文件为 `components.json`。添加组件时使用：
+
+```bash
+pnpm dlx shadcn-vue@latest add button card
+```
+
+组件默认生成到 `src/shared/ui`，工具函数使用 `src/shared/lib/utils.ts`。
 
 ## ✅ 类型检查
 
-Vue3 模板已从 JS 迁移到 TypeScript，源码模块使用 `.ts`，Vue 单文件组件按需使用 `<script setup lang="ts">`。提交前建议执行：
+Vue3 模板源码默认使用 TypeScript，核心目录包括 `src/app`、`src/features`、`src/shared`。提交前建议执行：
 
 ```bash
-pnpm run typecheck
 pnpm run lint
+pnpm run typecheck
+pnpm run build
 ```
 
 ## 📚 文档资源
 
-- [项目地址](https://gitee.com/whyfail/vite_vue3_init)
+- [GitHub 项目地址](https://github.com/whyfail/vite_vue3_init)
+- [Gitee 项目地址](https://gitee.com/whyfail/vite_vue3_init)
 - [Vue 3 官方文档](https://vuejs.org/)
+- [Vue Router 文档](https://router.vuejs.org/)
 - [Pinia 官方文档](https://pinia.vuejs.org/)
-- [Element Plus 文档](https://element-plus.org/zh-CN/)
-- [Vite 官方文档](https://vitejs.dev/)
-
-## 🎯 Pinia 状态管理示例
-
-### 创建状态存储
-
-```ts
-/**
- * stores状态模块化
- */
-import { createPinia } from "pinia"
-import useUserStore from "./storeUser"
-
-// 创建全局状态
-export const pinia = createPinia()
-
-// 全局状态日志查看
-pinia.use(({ store }) => {
-  store.$subscribe((e) => {
-    // 在存储变化的时候执行
-    console.debug(
-      `%c${new Date().toLocaleString()}：${e.storeId} 中的 ${e.events.key}状态改变：`,
-      "background-color: #00BCD4; padding: 6px 12px; border-radius: 2px; font-size: 14px; color: #fff; font-weight: 600;"
-    )
-    console.debug(`   `, e)
-  })
-  store.$onAction((e) => {
-    // 在 action 的时候执行
-    console.debug(
-      `%c${new Date().toLocaleString()}：${e.name} 方法调用：`,
-      "background-color: #2196f3; padding: 6px 12px; border-radius: 2px; font-size: 14px; color: #fff; font-weight: 600;"
-    )
-    console.debug(`   `, e)
-  })
-})
-
-export default function useStore() {
-  return {
-    storeUser: useUserStore(),
-  }
-}
-```
-
-### 定义状态模块
-
-```ts
-import { defineStore } from "pinia"
-
-const useUserStore = defineStore({
-  id: "storeUser",
-  state: () => ({
-    number: 0,
-  }),
-
-  actions: {
-    addNumber() {
-      this.number += 1
-    },
-    subtractNumber() {
-      this.number -= 1
-    },
-  },
-})
-
-export default useUserStore
-```
-
-### 在组件中使用
-
-```vue
-<script setup lang="ts">
-import useStore from "../stores"
-
-const { storeUser } = useStore()
-</script>
-
-<template>
-  <div>
-    <div>{{ storeUser.number }}</div>
-    <div>
-      <button @click="storeUser.addNumber">+</button>
-      <button @click="storeUser.subtractNumber">-</button>
-    </div>
-  </div>
-</template>
-```
+- [shadcn-vue 文档](https://www.shadcn-vue.com/)
+- [Tailwind CSS 文档](https://tailwindcss.com/)
+- [Heroicons 文档](https://github.com/tailwindlabs/heroicons)
+- [Vite 官方文档](https://vite.dev/)
 
 ---
 
-🎉 **立即使用create-wl-app，开启你的现代化Vue3开发之旅！**
+🎉 **立即使用 create-wl-app，开启你的现代化 Vue3 企业级开发之旅！**
 
-📱 适配大屏 | ⚡ 极致性能 | 🎨 优雅设计 | 🔧 开发友好
+🤖 AI 友好 | ⚡ 极致性能 | 🎨 现代 UI | 🔧 开发友好
