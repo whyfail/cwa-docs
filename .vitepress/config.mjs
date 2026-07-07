@@ -14,7 +14,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "教程简介", link: "/intro.md" },
       { text: "核心功能", link: "/core/脚手架核心.md" },
-      { text: "🔥 更新日志", link: "/log/2026-07-07.md" },
+      { text: "🔥 更新日志", link: "/log/2026-07-07-testing-gates.md" },
     ],
     search: {
       provider: "local",
@@ -41,6 +41,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "测试质量门禁升级",
+              link: "/log/2026-07-07-testing-gates.md",
+            },
             {
               text: "2026-07-07",
               link: "/log/2026-07-07.md",
