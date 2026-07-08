@@ -34,6 +34,7 @@ export default defineConfig({
             { text: "脚手架核心", link: "/core/脚手架核心.md" },
             { text: "React模板", link: "/core/React模板.md" },
             { text: "Vue3模板", link: "/core/Vue3模板.md" },
+            { text: "SSR模板", link: "/core/SSR模板.md" },
           ],
         },
       ],
@@ -41,6 +42,10 @@ export default defineConfig({
         {
           text: "更新日志",
           items: [
+            {
+              text: "SSR 企业级模板新增",
+              link: "/log/2026-07-08-ssr-templates.md",
+            },
             {
               text: "测试质量门禁升级",
               link: "/log/2026-07-07-testing-gates.md",
