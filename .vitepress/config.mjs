@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress"
 export default defineConfig({
   title: "create-wl-app",
   head: [["link", { rel: "icon", href: "https://github.com/whyfail/cwa-docs/blob/master/favicon.ico?raw=true" }]],
-  description: "基于vite的一个开箱即用的脚手架 create-wl-app",
+  description: "支持 React、Vue 3、Vite、Next.js 与 Nuxt 的现代化前端脚手架 create-wl-app",
   lang: "zh",
   base: "/cwa-docs/",
   themeConfig: {
@@ -34,7 +34,9 @@ export default defineConfig({
             { text: "脚手架核心", link: "/core/脚手架核心.md" },
             { text: "React模板", link: "/core/React模板.md" },
             { text: "Vue3模板", link: "/core/Vue3模板.md" },
-            { text: "SSR模板", link: "/core/SSR模板.md" },
+            { text: "SSR模板总览", link: "/core/SSR模板.md" },
+            { text: "React SSR模板", link: "/core/ReactSSR模板.md" },
+            { text: "Vue3 SSR模板", link: "/core/Vue3SSR模板.md" },
           ],
         },
       ],

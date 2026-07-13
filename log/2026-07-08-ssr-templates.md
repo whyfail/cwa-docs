@@ -47,10 +47,12 @@
 
 ```json
 {
-  "next-react-ssr": "https://gitee.com/whyfail/vite_react_ssr_init.git",
-  "nuxt-vue3-ssr": "https://gitee.com/whyfail/vite_vue3_ssr_init.git"
+  "next-react-ssr": "https://github.com/whyfail/vite_react_ssr_init.git",
+  "nuxt-vue3-ssr": "https://github.com/whyfail/vite_vue3_ssr_init.git"
 }
 ```
+
+`create-wl-app@1.0.8` 的交互选择已按“技术栈 → 应用类型 → 模板”分层，并继续支持通过标准输入传入模板标识、项目名称和可选描述。
 
 ## 验证结果
 

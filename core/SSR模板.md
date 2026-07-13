@@ -25,11 +25,22 @@ create-wl-app 新增两个独立 SSR 模板：
 ```bash
 npx create-wl-app create
 
+? 请选择技术栈
+❯ React
+  Vue
+
+? 请选择应用类型
+  单页面应用
+❯ SSR 服务端渲染
+
 ? 请选择模板
-  vite-react
-  vite-vue3
-❯ next-react-ssr
-  nuxt-vue3-ssr
+❯ Next.js React SSR 企业级模板（next-react-ssr）
+```
+
+选择 Vue 时，对应模板为 `Nuxt Vue 3 SSR 企业级模板（nuxt-vue3-ssr）`。自动化创建可以直接使用模板标识：
+
+```bash
+printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' 'Nuxt SSR 项目' | npx create-wl-app create
 ```
 
 ## 📁 项目结构
@@ -69,7 +80,9 @@ pnpm build
 - 真实登录态建议使用 cookie 或请求头；模板内的 localStorage/sessionStorage 只作为客户端演示。
 - E2E 针对生产预览服务运行，确保构建、服务端渲染、hydration 和路由跳转一起被验证。
 
-## 📚 项目地址
+## 📚 详细文档与项目地址
 
-- [React SSR 模板](https://github.com/whyfail/vite_react_ssr_init)
-- [Vue SSR 模板](https://github.com/whyfail/vite_vue3_ssr_init)
+- [React SSR 模板使用文档](/core/ReactSSR模板.md)
+- [Vue 3 SSR 模板使用文档](/core/Vue3SSR模板.md)
+- [React SSR 模板仓库](https://github.com/whyfail/vite_react_ssr_init)
+- [Vue 3 SSR 模板仓库](https://github.com/whyfail/vite_vue3_ssr_init)
