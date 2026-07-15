@@ -1,6 +1,21 @@
 # 简介
 
 - 不到一分钟即可创建好的一个基本前端项目模板
+- 文档站采用 React、Canvas 2D 与 CSS 3D 构建交互式演进时间线，Markdown 日志仍是唯一内容源
+
+## 文档站开发
+
+```bash
+npm install
+npm run dev
+```
+
+生产构建输出到 `dist`：
+
+```bash
+npm run build
+npm run preview
+```
 
 ## 环境准备
 
