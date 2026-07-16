@@ -27,7 +27,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 | UI 与样式 | shadcn/ui、Radix UI、Tailwind CSS 4、Sass |
 | API | Axios |
 | 测试 | Vitest、Testing Library、MSW、jest-axe、Playwright |
-| 工程规范 | ESLint、oxfmt、commitlint、simple-git-hooks |
+| 工程规范 | Next.js 官方 ESLint flat config、oxfmt、commitlint、simple-git-hooks |
 
 ## 快速开始
 

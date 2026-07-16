@@ -137,6 +137,7 @@ const LOG_TITLE_OVERRIDES = {
   "2026-06-23": "双模板依赖与验证基线升级",
   "2026-06-29": "React / Vue 质量基线升级",
   "2026-07-07": "Vite / TypeScript / 工具链升级",
+  "2026-07-16": "四模板依赖与质量基线升级",
 };
 
 function parseFrontmatter(source) {
