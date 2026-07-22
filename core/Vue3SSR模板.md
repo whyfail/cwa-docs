@@ -5,7 +5,7 @@ keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 
 # Vue 3 SSR 模板 —— Nuxt 企业级基线
 
-`nuxt-vue3-ssr` 是 create-wl-app 的 Vue 服务端渲染模板。它基于 Nuxt 4 与 Vue 3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`nuxt-vue3-ssr` 是 create-wl-app 的 Vue 服务端渲染模板。它基于 Nuxt 4.5 与 Vue 3.5，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -21,10 +21,10 @@ keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 
 | 分类 | 方案 |
 | --- | --- |
-| SSR 框架 | Nuxt 4 |
-| UI 框架 | Vue 3 |
+| SSR 框架 | Nuxt 4.5 |
+| UI 框架 | Vue 3.5 |
 | 开发语言 | TypeScript |
-| 状态管理 | Pinia、@pinia/nuxt |
+| 状态管理 | Pinia 3、@pinia/nuxt 0.11 |
 | UI 与样式 | shadcn-vue、reka-ui、Tailwind CSS 4、Sass |
 | API | Axios |
 | 测试 | Vitest、Testing Library Vue、MSW、jest-axe、Playwright |
