@@ -18,6 +18,7 @@ create-wl-app 新增两个独立 SSR 模板：
 - **企业级分层**：路由入口使用框架约定，业务仍按 `features`、`shared`、`server`、`test` 分层。
 - **SSR 安全**：服务端渲染路径不得直接访问 `window`、`document`、`localStorage`、`sessionStorage`。
 - **测试门禁**：内置 Vitest、组件测试覆盖检查、覆盖率阈值、jest-axe、Playwright E2E 和 CI。
+- **Node LTS**：统一使用 Node.js 24.18.0（Krypton LTS），模板支持范围为 `^24.18.0`。
 - **Node SSR**：第一版聚焦 Node 部署，不内置 SSG、Edge 或 Serverless adapter。
 
 ## 🧭 模板选择

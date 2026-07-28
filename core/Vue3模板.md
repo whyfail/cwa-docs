@@ -59,6 +59,8 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 ## 🚀 快速开始
 
+运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+
 ```bash
 # 创建项目
 npx create-wl-app create

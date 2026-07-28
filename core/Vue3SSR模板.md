@@ -32,6 +32,8 @@ keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 
 ## 快速开始
 
+运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+
 ```bash
 npx create-wl-app create
 

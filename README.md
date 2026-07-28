@@ -20,7 +20,7 @@ npm run preview
 ## 环境准备
 
 1. 首先，请确保你的设备上已经安装了 [Git](https://git-scm.com/)。
-2. 接着，需要安装 [Node.js](https://nodejs.org)。SPA 模板要求 `^20.19.0 || >=22.12.0`，SSR 模板要求 `^22.12.0 || ^24.11.0 || >=26.0.0`。
+2. 接着，需要安装 [Node.js 24.18.0](https://nodejs.org)（Krypton LTS）。四套模板统一支持 Node 24，`package.json` 的运行范围为 `^24.18.0`。
 3. 安装完这两个环境后，你就可以开始创建项目了。
 
 ## 开始

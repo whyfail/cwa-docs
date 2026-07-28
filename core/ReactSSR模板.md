@@ -31,6 +31,8 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 ## 快速开始
 
+运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+
 ```bash
 npx create-wl-app create
 

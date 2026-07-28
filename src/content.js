@@ -139,6 +139,7 @@ const LOG_TITLE_OVERRIDES = {
   "2026-07-07": "Vite / TypeScript / 工具链升级",
   "2026-07-16": "四模板依赖与质量基线升级",
   "2026-07-22": "四模板生态兼容升级",
+  "2026-07-28": "四模板统一 Node.js 24 LTS 基线",
 };
 
 function parseFrontmatter(source) {

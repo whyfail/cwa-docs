@@ -30,9 +30,8 @@ create-wl-app 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown�
    - 验证方式：`git --version`
 
 2. **Node.js** - JavaScript 运行时
-   - SPA 模板版本要求：`^20.19.0 || >=22.12.0`
-   - React SSR 模板版本要求：`^22.12.0 || ^24.11.0 || >=26.0.0`
-   - Vue SSR 模板版本要求：`^22.19.0 || ^24.11.0 || >=26.0.0`
+   - 四套模板统一使用 Node.js `24.18.0`（Krypton LTS）
+   - `package.json` 支持范围：`^24.18.0`
    - 直接下载node地址：[https://nodejs.org](https://nodejs.org)
    - 或使用 **nvm-desktop** 管理 Node.js 版本（推荐）
    - 下载地址: [nvm-desktop](https://github.com/1111mp/nvm-desktop)
