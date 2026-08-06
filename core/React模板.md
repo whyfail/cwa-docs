@@ -11,17 +11,27 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 - ✅ **AI 友好** - 内置 AGENTS.md 与 docs 入口，方便 AI Agent 快速理解项目边界
 - ✅ **企业级分层** - `app`、`features`、`shared` 分层清晰，默认避免业务代码散落
-- ⚡ **极致性能** - 基于 Vite 8 + Rolldown，构建速度飞起来
+- ⚡ **极致性能** - 基于 Vite 8.2 + Rolldown，构建速度飞起来
 - 🎨 **现代化 UI 栈** - 使用 shadcn/ui + Tailwind CSS + Heroicons 组织界面能力
 - 🔧 **开发友好** - 内置路由守卫、认证 session、API 封装、通知适配和代码规范
 
 ## 🛠️ 技术栈亮点
 
 ### 🔌 核心框架
-- **React 19** - 最新稳定版，带来并发渲染和自动批处理
-- **Vite 8** - 下一代前端构建工具，基于Rolldown引擎，速度飙升
+- **React 19.2** - 稳定版 React 基线，带来并发渲染和自动批处理
+- **Vite 8.2** - 下一代前端构建工具，基于 Rolldown 引擎
 - **TypeScript** - 默认使用 TS/TSX 组织源码，提供更清晰的类型约束和编辑器提示
 - **React Router DOM 7** - 使用 HashRouter 与集中式路由配置，支持 `title`、`needLogin` 等路由 meta
+
+### ⚡ Vite 8.2 构建基线
+
+- **入口配置更统一** - 新增顶层 `input`，插件解析后的入口会自动进入开发服务器文件白名单；模板仍使用标准 `index.html`，无需改动现有配置。
+- **开发反馈更清晰** - bundled dev 改进 worker HMR、重建 reload 和终端错误输出；网络地址会标记对应网卡接口，方便局域网联调。
+- **配置问题更易定位** - 原生配置加载兼容警告包含列号，并减少虚拟模块误报，复杂插件配置发生问题时可以更快找到具体位置。
+- **构建边缘场景更稳健** - 修复 CSS chunk import map、PostCSS 注入内容 URL、优化依赖 interop、非根 `base` 模块图和符号链接根目录等问题。
+- **依赖扫描减少无效工作** - 优先检查主流包管理器锁文件，并在忽略相关警告时跳过不必要的配置兼容检查；实际加速幅度取决于项目规模。
+
+当前模板的 React、Tailwind CSS、legacy、压缩、DevTools 与 code-inspector 插件组合已通过生产构建和 Playwright E2E。完整变更与模板验证见 [2026-08-06 升级日志](../log/2026-08-06.md#vite-820-主要提升)。
 
 ### 🎯 状态管理
 - **zustand** - 轻量级状态管理库，API简洁，性能卓越
