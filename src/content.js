@@ -141,6 +141,7 @@ const LOG_TITLE_OVERRIDES = {
   "2026-07-22": "四模板生态兼容升级",
   "2026-07-28": "四模板统一 Node.js 24 LTS 基线",
   "2026-08-06": "四模板生态与工具链兼容升级",
+  "2026-08-25": "四模板依赖与 SSR 兼容升级",
 };
 
 function parseFrontmatter(source) {

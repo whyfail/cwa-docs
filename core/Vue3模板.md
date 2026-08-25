@@ -11,7 +11,7 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 - ✅ **AI 友好** - 内置 AGENTS.md、docs 模块和 shadcn-vue skill，方便 AI Agent 快速理解项目边界
 - ✅ **企业级分层** - `app`、`features`、`shared` 分层清晰，默认避免业务代码散落
-- ⚡ **极致性能** - 基于 Vite 8.2 + Rolldown，构建速度飞起来
+- ⚡ **极致性能** - 基于 Vite 8.2.2 + Rolldown，构建速度飞起来
 - 🎨 **现代化 UI 栈** - 使用 shadcn-vue + Tailwind CSS + Heroicons 组织界面能力
 - 🔧 **开发友好** - 内置路由守卫、认证 session、API 封装、通知适配和代码规范
 
@@ -19,8 +19,8 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 ### 🔌 核心框架
 
-- **Vue 3.5.40** - 使用 Composition API 与 `<script setup lang="ts">` 作为默认组件范式
-- **Vite 8.2** - 下一代前端构建工具，基于 Rolldown 引擎
+- **Vue 3.5.41** - 使用 Composition API 与 `<script setup lang="ts">` 作为默认组件范式
+- **Vite 8.2.2** - 下一代前端构建工具，基于 Rolldown 引擎
 - **TypeScript** - 默认使用 `.ts` 与 Vue SFC 类型检查，提供更清晰的类型约束
 - **Vue Router 5.2** - feature 暴露 routes，由 `src/app/routes` 聚合
 
