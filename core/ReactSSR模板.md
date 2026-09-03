@@ -5,7 +5,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 # React SSR 模板 —— Next.js 企业级基线
 
-`next-react-ssr` 是 create-wl-app 的 React 服务端渲染模板。它基于 Next.js 16.3.2 App Router 与 React 19.2，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`next-react-ssr` 是 create-wl-app 的 React 服务端渲染模板。它基于 Next.js 16.3.4 App Router 与 React 19.2，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -20,7 +20,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 | 分类 | 方案 |
 | --- | --- |
-| SSR 框架 | Next.js 16.3.2 App Router |
+| SSR 框架 | Next.js 16.3.4 App Router |
 | UI 框架 | React 19.2 |
 | 开发语言 | TypeScript |
 | 状态管理 | Zustand |
