@@ -143,6 +143,7 @@ const LOG_TITLE_OVERRIDES = {
   "2026-08-06": "四模板生态与工具链兼容升级",
   "2026-08-25": "四模板依赖与 SSR 兼容升级",
   "2026-09-03": "四模板依赖与工具链兼容升级",
+  "2026-09-12": "四模板 Vitest 5 升级与兼容性治理",
 };
 
 function parseFrontmatter(source) {
