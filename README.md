@@ -20,7 +20,7 @@ npm run preview
 ## 环境准备
 
 1. 首先，请确保你的设备上已经安装了 [Git](https://git-scm.com/)。
-2. 接着，需要安装 [Node.js 24.18.0](https://nodejs.org)（Krypton LTS）。四套模板统一支持 Node 24，`package.json` 的运行范围为 `^24.18.0`。
+2. 接着，需要安装 [Node.js 24 LTS](https://nodejs.org)（Krypton，推荐最新 24.x）。四套模板的 `package.json` 运行范围为 `>=24.11.0 <25`。
 3. 安装完这两个环境后，你就可以开始创建项目了。
 
 ## 开始

@@ -18,7 +18,7 @@ create-wl-app 新增两个独立 SSR 模板：
 - **企业级分层**：路由入口使用框架约定，业务仍按 `features`、`shared`、`server`、`test` 分层。
 - **SSR 安全**：服务端渲染路径不得直接访问 `window`、`document`、`localStorage`、`sessionStorage`。
 - **测试门禁**：内置 Vitest、组件测试覆盖检查、覆盖率阈值、jest-axe、Playwright E2E 和 CI。
-- **Node LTS**：统一使用 Node.js 24.18.0（Krypton LTS），模板支持范围为 `^24.18.0`。
+- **Node LTS**：统一使用 Node.js 24 LTS（Krypton），模板支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 - **Node SSR**：第一版聚焦 Node 部署，不内置 SSG、Edge 或 Serverless adapter。
 
 ## 🧭 模板选择
@@ -78,7 +78,7 @@ pnpm build
 
 - React SSR 模板默认使用 Server Component，只有交互组件才加 `"use client"`。
 - Vue SSR 模板的浏览器专属逻辑应放在 `.client` 插件、`onMounted` 或显式客户端判断中。
-- 真实登录态建议使用 cookie 或请求头；模板内的 localStorage/sessionStorage 只作为客户端演示。
+- 两套 SSR 模板均使用 HttpOnly、SameSite Cookie 演示登录态，并在服务端保护受限路由。
 - E2E 针对生产预览服务运行，确保构建、服务端渲染、hydration 和路由跳转一起被验证。
 
 ## 📚 详细文档与项目地址

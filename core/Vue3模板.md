@@ -69,7 +69,7 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 ## 🚀 快速开始
 
-运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+运行时统一使用 Node.js 24 LTS（Krypton），支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 
 ```bash
 # 创建项目
@@ -144,7 +144,7 @@ src/
 ```txt
 VITE_APP_NAME="初始化项目"
 VITE_API_BASE="/API_BASE"
-VITE_API_TARGET="http://xxxx"
+VITE_API_TARGET="http://localhost:8080"
 VITE_ENABLE_VUE_DEVTOOLS=true
 VITE_ENABLE_DEVTOOLS=false
 VITE_ENABLE_CODE_INSPECTOR=false

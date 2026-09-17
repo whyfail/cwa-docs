@@ -5,7 +5,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 # React SSR 模板 —— Next.js 企业级基线
 
-`next-react-ssr` 是 create-wl-app 的 React 服务端渲染模板。它基于 Next.js 16.3.4 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`next-react-ssr` 是 create-wl-app 的 React 服务端渲染模板。它基于 Next.js 16.3.5 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -20,7 +20,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 | 分类 | 方案 |
 | --- | --- |
-| SSR 框架 | Next.js 16.3.4 App Router |
+| SSR 框架 | Next.js 16.3.5 App Router |
 | UI 框架 | React 19.3 |
 | 开发语言 | TypeScript |
 | 状态管理 | Zustand |
@@ -31,7 +31,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 
 ## 快速开始
 
-运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+运行时统一使用 Node.js 24 LTS（Krypton），支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 
 ```bash
 npx create-wl-app create
@@ -67,7 +67,7 @@ tests/e2e/             # Playwright E2E 用例
 
 - 默认编写 Server Component，只有交互组件或浏览器能力需要添加 `"use client"`。
 - `window`、`document`、`localStorage` 和 `sessionStorage` 不得在服务端渲染路径直接执行。
-- 真实登录态优先使用 cookie 或请求头；模板中的浏览器存储仅用于客户端演示。
+- 模板通过 Route Handler 写入 HttpOnly Cookie，并由 `proxy.ts` 保护受限路由；接入业务时替换示例凭据校验。
 - 业务请求通过 `src/shared/api` 发起，需要密钥或请求上下文的调用留在 `src/server`。
 - 页面文件保持为薄入口，业务 UI 和逻辑放入对应的 `src/features/<name>`。
 

@@ -32,7 +32,7 @@ keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 
 ## 快速开始
 
-运行时统一使用 Node.js 24.18.0（Krypton LTS），支持范围为 `^24.18.0`。
+运行时统一使用 Node.js 24 LTS（Krypton），支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 
 ```bash
 npx create-wl-app create
@@ -70,7 +70,7 @@ tests/e2e/             # Playwright E2E 用例
 
 - 浏览器专属行为放在 `.client` 插件、`onMounted`，或使用 `import.meta.client` 显式保护。
 - `window`、`document`、`localStorage` 和 `sessionStorage` 不得在服务端渲染路径直接执行。
-- 真实登录态优先使用 cookie 或请求头；模板中的浏览器存储仅用于客户端演示。
+- 模板通过 Nitro API 写入 HttpOnly Cookie，并由服务端中间件保护受限路由；接入业务时替换示例凭据校验。
 - 业务请求通过 `src/shared/api` 发起，需要密钥或请求上下文的调用留在 `src/server`。
 - `src/pages` 中的页面保持为薄入口，业务 UI 和逻辑放入对应的 `src/features/<name>`。
 
