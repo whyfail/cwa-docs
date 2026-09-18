@@ -86,6 +86,8 @@ npx create-wl-app create
 | `nuxt-vue3-ssr` | SSR | Nuxt 4 + Vue 3 |
 | `spring-boot` | 后端单体 | Java 25 + Spring Boot 4 |
 
+各模板的详细能力说明见「核心能力」文档：[React 模板](/core/React模板)、[Vue3 模板](/core/Vue3模板)、[ReactSSR模板](/core/ReactSSR模板)、[Vue3SSR模板](/core/Vue3SSR模板)、[SpringBoot模板](/core/SpringBoot模板)。
+
 ### 📝 步骤 3：填写项目信息
 
 按照提示输入项目名称和项目描述：
