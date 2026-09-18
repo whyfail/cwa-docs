@@ -39,6 +39,14 @@ const CATEGORY_RULES = [
     impact: "脚手架从 SPA 扩展到客户端与服务端协同的企业级应用架构。",
   },
   {
+    match: /spring( boot)?|java ?25|maven|testcontainers|后端模板/i,
+    category: "SPRING ECOSYSTEM",
+    kicker: "JAVA BACKEND TEMPLATE",
+    visual: "scaling",
+    accent: "#6db33f",
+    impact: "脚手架从纯前端扩展到前后端一体的企业级模板体系，Java 后端纳入同一套生成与质量门禁。",
+  },
+  {
     match: /vitest|playwright|测试|质量门禁|coverage|typecheck/i,
     category: "QUALITY GATES",
     kicker: "VERIFY BEFORE SHIP",

@@ -84,6 +84,7 @@ npx create-wl-app create
 | `vite-vue3` | SPA | Vite 8 + Vue 3 |
 | `next-react-ssr` | SSR | Next.js 16 + React 19 |
 | `nuxt-vue3-ssr` | SSR | Nuxt 4 + Vue 3 |
+| `spring-boot` | 后端单体 | Java 25 + Spring Boot 4 |
 
 ### 📝 步骤 3：填写项目信息
 
@@ -93,6 +94,8 @@ npx create-wl-app create
 ? 请输入项目名称：my-awesome-app
 ? 请输入项目描述：一个使用 create-wl-app 创建的现代化前端应用
 ```
+
+选择 `spring-boot` 后端模板时，会额外询问 Java 包名（例如 `com.mycompany.myapp`），生成时会替换模板中的 `{{ package }}` / `{{ name }}` 占位符。
 
 ### 🤖 非交互创建
 
@@ -108,7 +111,13 @@ printf '%s\n' 'vite-react' 'my-react-app' 'React SPA 项目' | npx create-wl-app
 printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' | npx create-wl-app create
 ```
 
-管道模式直接使用模板标识，不再询问技术栈和应用类型。模板标识必须是 `vite-react`、`vite-vue3`、`next-react-ssr` 或 `nuxt-vue3-ssr`。
+管道模式直接使用模板标识，不再询问技术栈和应用类型。模板标识必须是 `vite-react`、`vite-vue3`、`next-react-ssr`、`nuxt-vue3-ssr` 或 `spring-boot`。
+
+`spring-boot` 模板的管道格式多一行 Java 包名：
+
+```bash
+printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' 'Spring Boot 后端服务' | npx create-wl-app create
+```
 
 ### ⏳ 步骤 4：等待模板下载
 

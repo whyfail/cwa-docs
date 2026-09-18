@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: create-wl-app
-  text: 🚀 现代化前端脚手架
+  text: 🚀 现代化全栈项目脚手架
   tagline: 开箱即用，极速响应，让开发更简单、更高效！
   image:
     src: /logo.png
@@ -35,6 +35,9 @@ features:
   - title: 📦 开箱即用
     icon: 📦
     details: 内置完整的项目结构、路由、状态管理、UI 组件库等，无需复杂配置，专注业务逻辑开发。
+  - title: 🌱 全栈覆盖
+    icon: 🌱
+    details: 新增 Spring Boot 企业级后端模板（Java 25 + Spring Boot 4），与前端模板共享 opaque token 会话与 Bearer 鉴权契约。
   - title: 🔧 开发友好
     icon: 🔧
     details: 集成开发调试工具、代码规范检查、Git 钩子等，提升开发效率，确保代码质量。
