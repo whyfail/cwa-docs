@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
+keywords: [cwa-stack, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
 ---
 
 # 🚀 Vue3 模板 —— 为 AI 而生的企业级项目模板
@@ -73,7 +73,7 @@ keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, �
 
 ```bash
 # 创建项目
-npx create-wl-app create
+npx cwa-stack create
 
 ? 请选择技术栈
   React
@@ -187,7 +187,7 @@ pnpm run build
 
 ---
 
-🎉 **立即使用 create-wl-app，开启你的现代化 Vue3 企业级开发之旅！**
+🎉 **立即使用 cwa-stack，开启你的现代化 Vue3 企业级开发之旅！**
 
 🤖 AI 友好 | ⚡ 极致性能 | 🎨 现代 UI | 🔧 开发友好
 

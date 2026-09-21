@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: create-wl-app
+  name: cwa-stack
   text: 🚀 现代化全栈项目脚手架
   tagline: 开箱即用，极速响应，让开发更简单、更高效！
   image:
     src: /logo.png
-    alt: create-wl-app Logo
+    alt: cwa-stack Logo
     width: 200
     height: 200
   actions:
@@ -49,9 +49,9 @@ features:
     details: 紧跟技术发展趋势，持续更新依赖库和最佳实践，确保项目始终使用最新、最稳定的技术栈。
 ---
 
-## 📊 为什么选择 create-wl-app？
+## 📊 为什么选择 cwa-stack？
 
-| 特性 | create-wl-app | 传统脚手架 |
+| 特性 | cwa-stack | 传统脚手架 |
 | --- | --- | --- |
 | 构建速度 | ⚡ 秒级启动 | 🐢 分钟级启动 |
 | 技术栈 | 🎨 现代化 | 📻 老旧 |
@@ -70,7 +70,7 @@ features:
 
 ## 📣 来自开发者的评价
 
-> "使用 create-wl-app 后，我们的项目搭建时间从几小时缩短到几分钟，开发效率提升了 50%！" —— 前端团队负责人
+> "使用 cwa-stack 后，我们的项目搭建时间从几小时缩短到几分钟，开发效率提升了 50%！" —— 前端团队负责人
 
 > "脚手架配置完善，技术栈现代化，让我们可以专注于业务逻辑开发，不用再为底层配置发愁。" —— 资深前端开发者
 
@@ -78,6 +78,6 @@ features:
 
 ---
 
-🎉 **立即开始使用 create-wl-app，体验现代化前端开发的极致快感！**
+🎉 **立即开始使用 cwa-stack，体验现代化前端开发的极致快感！**
 
 📚 [查看文档](/core/脚手架核心.md) | ⭐ [GitHub 仓库](https://github.com/whyfail/create-wl-app) 

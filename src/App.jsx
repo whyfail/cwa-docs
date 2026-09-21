@@ -242,7 +242,7 @@ function ArchiveOverlay({ activeDocumentId, onClose, onSelectDocument }) {
   }, [query, scope]);
 
   return (
-    <section className="archive-overlay" aria-label="create-wl-app 文档索引">
+    <section className="archive-overlay" aria-label="cwa-stack 文档索引">
       <div className="archive-overlay__head">
         <div><p>CWA / PROJECT MEMORY</p><h2>演进档案与文档</h2></div>
         <button type="button" onClick={onClose} autoFocus><X size={16} /> CLOSE</button>
@@ -329,7 +329,7 @@ function DocumentReader({ document, onTimeline }) {
   const matches = (item) => !normalizedQuery || `${item.title} ${item.date} ${item.category}`.toLocaleLowerCase().includes(normalizedQuery);
 
   useEffect(() => {
-    globalThis.document.title = `${document.title} / create-wl-app`;
+    globalThis.document.title = `${document.title} / cwa-stack`;
     articleRef.current?.scrollTo({ top: 0 });
     setMenuOpen(false);
   }, [document]);
@@ -541,7 +541,7 @@ export function App() {
 
   const routeDocument = routeDocumentId ? documentById.get(routeDocumentId) : null;
   if (routeDocument) {
-    return <DocumentReader document={routeDocument} onTimeline={() => { window.location.hash = "/"; document.title = "create-wl-app / Evolution Archive"; }} />;
+    return <DocumentReader document={routeDocument} onTimeline={() => { window.location.hash = "/"; document.title = "cwa-stack / Evolution Archive"; }} />;
   }
 
   const activeEra = activeDocuments[activeIndex];
@@ -582,7 +582,7 @@ export function App() {
           </nav>
         </header>
         <aside className="timeline-rail" aria-label="文档进度"><div className="timeline-rail__top">{activeEra.year}</div><div className="timeline-rail__track"><span /></div><div className="timeline-rail__bottom">{pad(activeIndex)} / {String(activeDocuments.length).padStart(2, "0")}</div></aside>
-        <section className="timeline-scene" aria-label={`create-wl-app ${HOME_SECTIONS.find((item) => item.id === section)?.label}`}>
+        <section className="timeline-scene" aria-label={`cwa-stack ${HOME_SECTIONS.find((item) => item.id === section)?.label}`}>
           <div className="timeline-scene__axis" aria-hidden="true" />
           {activeDocuments.map((era, index) => Math.abs(index - visualProgress) <= 4.2 ? <EraCard key={era.id} era={era} index={index} progress={visualProgress} onSelect={(selectedIndex, isActive) => isActive ? openDetail(selectedIndex, true) : jumpTo(selectedIndex)} viewport={viewport} total={activeDocuments.length} /> : null)}
         </section>

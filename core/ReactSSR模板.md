@@ -1,11 +1,11 @@
 ---
 sidebar_position: 6
-keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind CSS]
+keywords: [cwa-stack, React, SSR, Next.js, App Router, TypeScript, Tailwind CSS]
 ---
 
 # React SSR 模板 —— Next.js 企业级基线
 
-`next-react-ssr` 是 create-wl-app 的 React 服务端渲染模板。它基于 Next.js 16.3.5 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`next-react-ssr` 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.5 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -34,7 +34,7 @@ keywords: [create-wl-app, React, SSR, Next.js, App Router, TypeScript, Tailwind 
 运行时统一使用 Node.js 24 LTS（Krypton），支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 
 ```bash
-npx create-wl-app create
+npx cwa-stack create
 
 ? 请选择技术栈 React
 ? 请选择应用类型 SSR 服务端渲染

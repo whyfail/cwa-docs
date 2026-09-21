@@ -1,6 +1,6 @@
 ---
 sidebar_position: 8
-keywords: [create-wl-app, spring-boot, Spring Boot, Java 25, 后端模板, 企业级, 后端开发, 后端框架, 微服务, 单体架构]
+keywords: [cwa-stack, spring-boot, Spring Boot, Java 25, 后端模板, 企业级, 后端开发, 后端框架, 微服务, 单体架构]
 ---
 
 # 🚀 Spring Boot 模板 —— 为 AI 而生的企业级后端模板
@@ -42,10 +42,10 @@ keywords: [create-wl-app, spring-boot, Spring Boot, Java 25, 后端模板, 企�
 
 仓库为模板源码，Java 包名与项目名使用 `{{ package }}` / `{{ name }}` 占位符。两种生成方式：
 
-**create-wl-app（推荐）**：
+**cwa-stack（推荐）**：
 
 ```bash
-printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' '项目描述' | npx create-wl-app create
+printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' '项目描述' | npx cwa-stack create
 ```
 
 **仓库自带脚本**：
@@ -72,4 +72,4 @@ printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' '项目描述
 
 - 与四套前端模板共享同一套登录契约（见 `docs/frontend-integration.md`）；API 根路径 `/api/v1`，登录响应顶层 `token/tokenType/expiresAt/user`，错误为 Problem Details 顶层 `code/msg/requestId`。
 - CORS 白名单由 `APP_ALLOWED_ORIGINS` 控制（默认 `http://localhost:5173,http://localhost:3000`）；全栈组合工程由根级编排脚本按 Web 端口与 E2E preview 端口显式注入，无需手工维护。
-- 组合模式说明：`create-wl-app` 的四个全栈预设（`react-spring` / `vue-spring` / `next-spring` / `nuxt-spring`）将本模板装配到 `apps/api`，与前端 `apps/web` 组成单一 Git 仓库工程，根级 `pnpm run verify` 会以本模板的 openapi.yaml 为契约做漂移检查与真实登录 E2E。
+- 组合模式说明：`cwa-stack` 的四个全栈预设（`react-spring` / `vue-spring` / `next-spring` / `nuxt-spring`）将本模板装配到 `apps/api`，与前端 `apps/web` 组成单一 Git 仓库工程，根级 `pnpm run verify` 会以本模板的 openapi.yaml 为契约做漂移检查与真实登录 E2E。

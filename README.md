@@ -26,7 +26,7 @@ npm run preview
 ## 开始
 
 1. 打开你想要创建项目的文件夹，并在此处打开终端。
-2. 在终端中输入 `npx create-wl-app create`，依次选择技术栈、应用类型和模板，再输入项目名称与项目描述。
+2. 在终端中输入 `npx cwa-stack create`，依次选择技术栈、应用类型和模板，再输入项目名称与项目描述。
 3. 下载选择的模板，通常只需要几秒钟就能完成，这里只下载模板，并没有下载依赖。
 4. 在终端中输入 `cd <项目名称>`，进入到项目文件夹中。
 5. 初始化一个 Git 仓库，使用 `git init` 命令，并添加和提交文件。
@@ -36,5 +36,5 @@ npm run preview
 当前支持 `vite-react`、`vite-vue3`、`next-react-ssr`、`nuxt-vue3-ssr` 四个模板。自动化场景也可通过标准输入依次传入模板标识、项目名称和可选描述：
 
 ```bash
-printf '%s\n' 'next-react-ssr' 'my-app' 'Next.js SSR 项目' | npx create-wl-app create
+printf '%s\n' 'next-react-ssr' 'my-app' 'Next.js SSR 项目' | npx cwa-stack create
 ```

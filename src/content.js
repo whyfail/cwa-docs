@@ -109,7 +109,7 @@ const FALLBACK_CATEGORY = {
   kicker: "CREATE-WL-APP CHANGELOG",
   visual: "agents",
   accent: "#ffc95e",
-  impact: "create-wl-app 的默认能力与使用体验得到一次可追溯的改进。",
+  impact: "cwa-stack 的默认能力与使用体验得到一次可追溯的改进。",
 };
 
 const KNOWN_TERMS = [
@@ -269,7 +269,7 @@ export const coreDocuments = Object.entries(coreModules)
 export const guideDocuments = [
   makeDocument("guide/overview.md", overviewRaw, "guide", {
     id: "guide/overview",
-    title: "create-wl-app 项目总览",
+    title: "cwa-stack 项目总览",
     description: "现代化前端脚手架的能力概览、适用场景与模板体系。",
   }),
   makeDocument("guide/quick-start.md", quickStartRaw, "guide", {

@@ -1,11 +1,11 @@
 ---
 sidebar_position: 7
-keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
+keywords: [cwa-stack, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 ---
 
 # Vue 3 SSR 模板 —— Nuxt 企业级基线
 
-`nuxt-vue3-ssr` 是 create-wl-app 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`nuxt-vue3-ssr` 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -35,7 +35,7 @@ keywords: [create-wl-app, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 运行时统一使用 Node.js 24 LTS（Krypton），支持范围为 `>=24.11.0 <25`，推荐使用最新 24.x。
 
 ```bash
-npx create-wl-app create
+npx cwa-stack create
 
 ? 请选择技术栈 Vue
 ? 请选择应用类型 SSR 服务端渲染

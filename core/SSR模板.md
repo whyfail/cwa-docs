@@ -1,11 +1,11 @@
 ---
 sidebar_position: 5
-keywords: [create-wl-app, SSR, Next.js, Nuxt, React, Vue3, 企业级模板, 前端脚手架]
+keywords: [cwa-stack, SSR, Next.js, Nuxt, React, Vue3, 企业级模板, 前端脚手架]
 ---
 
 # 🚀 SSR 模板 —— Next.js 与 Nuxt 企业级基线
 
-create-wl-app 新增两个独立 SSR 模板：
+cwa-stack 新增两个独立 SSR 模板：
 
 - `next-react-ssr`：基于 Next.js App Router、React 19、TypeScript、Tailwind CSS 4。
 - `nuxt-vue3-ssr`：基于 Nuxt 4、Vue 3、TypeScript、Pinia、Tailwind CSS 4。
@@ -24,7 +24,7 @@ create-wl-app 新增两个独立 SSR 模板：
 ## 🧭 模板选择
 
 ```bash
-npx create-wl-app create
+npx cwa-stack create
 
 ? 请选择技术栈
 ❯ React
@@ -41,7 +41,7 @@ npx create-wl-app create
 选择 Vue 时，对应模板为 `Nuxt Vue 3 SSR 企业级模板（nuxt-vue3-ssr）`。自动化创建可以直接使用模板标识：
 
 ```bash
-printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' 'Nuxt SSR 项目' | npx create-wl-app create
+printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' 'Nuxt SSR 项目' | npx cwa-stack create
 ```
 
 ## 📁 项目结构

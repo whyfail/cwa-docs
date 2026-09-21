@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
 title: 🚀 快速开始
-keywords: [create-wl-app, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
+keywords: [cwa-stack, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
 ---
 
-# 🎉 欢迎使用 create-wl-app
+# 🎉 欢迎使用 cwa-stack
 
-## 🚀 什么是 create-wl-app？
+## 🚀 什么是 cwa-stack？
 
-create-wl-app 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown、Next.js 与 Nuxt 模板，旨在为开发者提供**极速、便捷、开箱即用**的项目创建体验。
+cwa-stack 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown、Next.js 与 Nuxt 模板，旨在为开发者提供**极速、便捷、开箱即用**的项目创建体验。
 
 ### ✨ 核心优势
 
@@ -56,7 +56,7 @@ create-wl-app 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown�
 
 ```bash
 # 使用 npx 创建项目
-npx create-wl-app create
+npx cwa-stack create
 ```
 
 ### 🎯 步骤 2：选择创建方式、技术栈、应用类型和模板
@@ -107,7 +107,7 @@ npx create-wl-app create
 
 ```
 ? 请输入项目名称：my-awesome-app
-? 请输入项目描述：一个使用 create-wl-app 创建的现代化前端应用
+? 请输入项目描述：一个使用 cwa-stack 创建的现代化前端应用
 ```
 
 选择 `spring-boot` 后端模板时，会额外询问 Java 包名（例如 `com.mycompany.myapp`），生成时会替换模板中的 `{{ package }}` / `{{ name }}` 占位符。
@@ -119,21 +119,21 @@ CI、脚本或 AI Agent 可以通过命令行参数或标准输入创建项目�
 独立项目用 `--template`，组合项目用 `--preset`（两者互斥）：
 
 ```bash
-npx create-wl-app create my-web --template vite-react --description "My web application"
-npx create-wl-app create my-api --template spring-boot --package com.example.myapi
-npx create-wl-app create my-app --preset react-spring --package com.example.myapp --description "My full-stack application"
+npx cwa-stack create my-web --template vite-react --description "My web application"
+npx cwa-stack create my-api --template spring-boot --package com.example.myapi
+npx cwa-stack create my-app --preset react-spring --package com.example.myapp --description "My full-stack application"
 ```
 
 也可以继续使用标准输入，每行依次传入模板标识、项目名称和可选的项目描述：
 
 ```bash
-printf '%s\n' 'vite-react' 'my-react-app' 'React SPA 项目' | npx create-wl-app create
+printf '%s\n' 'vite-react' 'my-react-app' 'React SPA 项目' | npx cwa-stack create
 ```
 
 省略项目描述时只传两行：
 
 ```bash
-printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' | npx create-wl-app create
+printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' | npx cwa-stack create
 ```
 
 管道模式直接使用模板标识，不再询问技术栈和应用类型。模板标识必须是 `vite-react`、`vite-vue3`、`next-react-ssr`、`nuxt-vue3-ssr` 或 `spring-boot`。
@@ -141,13 +141,13 @@ printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' | npx create-wl-app create
 `spring-boot` 模板的管道格式多一行 Java 包名：
 
 ```bash
-printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' 'Spring Boot 后端服务' | npx create-wl-app create
+printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' 'Spring Boot 后端服务' | npx cwa-stack create
 ```
 
 全栈组合使用 `preset:` 前缀的管道格式（Java 包名必填）：
 
 ```bash
-printf '%s\n' 'preset:react-spring' 'my-app' 'com.example.myapp' '全栈应用' | npx create-wl-app create
+printf '%s\n' 'preset:react-spring' 'my-app' 'com.example.myapp' '全栈应用' | npx cwa-stack create
 ```
 
 ### 🧬 全栈组合工程
@@ -306,15 +306,15 @@ my-awesome-app/
 
 ## 📚 常用命令
 
-### create-wl-app 命令
+### cwa-stack 命令
 
 | 命令 | 描述 |
 | --- | --- |
-| `npx create-wl-app create` | 交互式或管道式创建项目 |
-| `npx create-wl-app list` | 查看当前可用模板及仓库地址 |
-| `npx create-wl-app add` | 向当前安装副本添加自定义模板 |
-| `npx create-wl-app delete` | 从当前安装副本删除模板 |
-| `npx create-wl-app --version` | 查看 CLI 版本 |
+| `npx cwa-stack create` | 交互式或管道式创建项目 |
+| `npx cwa-stack list` | 查看当前可用模板及仓库地址 |
+| `npx cwa-stack add` | 向当前安装副本添加自定义模板 |
+| `npx cwa-stack delete` | 从当前安装副本删除模板 |
+| `npx cwa-stack --version` | 查看 CLI 版本 |
 
 `add` 和 `delete` 修改的是 CLI 当前安装副本中的模板配置；使用一次性 `npx` 时不适合作为持久模板管理方式。
 
@@ -331,7 +331,7 @@ my-awesome-app/
 
 ## 🚀 下一步
 
-恭喜你！你已经成功创建了一个使用 create-wl-app 的现代化前端项目。
+恭喜你！你已经成功创建了一个使用 cwa-stack 的现代化前端项目。
 
 ### 🌟 推荐阅读
 
