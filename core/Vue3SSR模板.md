@@ -104,3 +104,13 @@ NUXT_ENABLE_CODE_INSPECTOR=true pnpm dev
 - [Nuxt 文档](https://nuxt.com/docs)
 - [Vue 3 文档](https://vuejs.org/)
 - [shadcn-vue 文档](https://www.shadcn-vue.com/)
+
+## 🔐 真实登录与契约（BFF）
+
+Vue 3 SSR 模板已与配套后端 [springboot-template](https://github.com/whyfail/springboot-template) 形成真实登录闭环：
+
+- 浏览器只与会话 API（`/api/session`）交互：登录 `POST`、退出 `DELETE`；token 只存在于 HttpOnly Cookie `auth_token` 与服务端上下文，绝不进入浏览器 JS。
+- Nitro 服务端调用真实后端 `POST {NUXT_BACKEND_API_BASE_URL}/login`（服务端私有环境变量，禁止暴露到浏览器），Cookie `Max-Age` 不超过后端 `expiresAt`。
+- 服务端请求通过 `src/server/backend.ts` 把 Cookie token 转换为 `Authorization: Bearer`；后端错误 Problem Details 顶层 `code/msg/requestId` 透传到浏览器。
+- 会话 Mock 显式开启：`NUXT_ENABLE_AUTH_MOCK=true`（演示账号 `admin`/`admin`），用于无后端本地开发与模板 E2E；真实后端 E2E 用 `E2E_AUTH_MOCK=false` + `E2E_AUTH_USERNAME/E2E_AUTH_PASSWORD`。
+- 契约类型由 `pnpm run api:generate` 生成（`openapi/api-contract.yaml` → `src/shared/api/generated`），服务端统一从 `src/server/contract.ts` 导入。

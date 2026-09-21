@@ -59,11 +59,15 @@ create-wl-app 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown�
 npx create-wl-app create
 ```
 
-### 🎯 步骤 2：选择技术栈、应用类型和模板
+### 🎯 步骤 2：选择创建方式、技术栈、应用类型和模板
 
-根据提示依次选择技术栈、应用类型和模板：
+首问选择创建方式（独立项目 / 全栈组合项目）；独立项目再依次选择技术栈、应用类型和模板：
 
 ```
+? 请选择创建方式：
+❯ 独立项目
+  全栈组合项目
+
 ? 请选择技术栈：
 ❯ React
   Vue
@@ -86,6 +90,15 @@ npx create-wl-app create
 | `nuxt-vue3-ssr` | SSR | Nuxt 4 + Vue 3 |
 | `spring-boot` | 后端单体 | Java 25 + Spring Boot 4 |
 
+选择「全栈组合项目」时，只需选择前端技术栈（React / Vue）与渲染模式（SPA / SSR），前端模板随之唯一确定，后端固定为 `spring-boot`：
+
+| 全栈预设 | 前端模板 | 后端模板 | Web 端口 |
+| --- | --- | --- | ---: |
+| `react-spring` | `vite-react` | `spring-boot` | 5173 |
+| `vue-spring` | `vite-vue3` | `spring-boot` | 5173 |
+| `next-spring` | `next-react-ssr` | `spring-boot` | 3000 |
+| `nuxt-spring` | `nuxt-vue3-ssr` | `spring-boot` | 3000 |
+
 各模板的详细能力说明见「核心能力」文档：[React 模板](/core/React模板)、[Vue3 模板](/core/Vue3模板)、[ReactSSR模板](/core/ReactSSR模板)、[Vue3SSR模板](/core/Vue3SSR模板)、[SpringBoot模板](/core/SpringBoot模板)。
 
 ### 📝 步骤 3：填写项目信息
@@ -101,7 +114,17 @@ npx create-wl-app create
 
 ### 🤖 非交互创建
 
-CI、脚本或 AI Agent 可以通过标准输入创建项目，每行依次传入模板标识、项目名称和可选的项目描述：
+CI、脚本或 AI Agent 可以通过命令行参数或标准输入创建项目。
+
+独立项目用 `--template`，组合项目用 `--preset`（两者互斥）：
+
+```bash
+npx create-wl-app create my-web --template vite-react --description "My web application"
+npx create-wl-app create my-api --template spring-boot --package com.example.myapi
+npx create-wl-app create my-app --preset react-spring --package com.example.myapp --description "My full-stack application"
+```
+
+也可以继续使用标准输入，每行依次传入模板标识、项目名称和可选的项目描述：
 
 ```bash
 printf '%s\n' 'vite-react' 'my-react-app' 'React SPA 项目' | npx create-wl-app create
@@ -120,6 +143,40 @@ printf '%s\n' 'nuxt-vue3-ssr' 'my-nuxt-app' | npx create-wl-app create
 ```bash
 printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' 'Spring Boot 后端服务' | npx create-wl-app create
 ```
+
+全栈组合使用 `preset:` 前缀的管道格式（Java 包名必填）：
+
+```bash
+printf '%s\n' 'preset:react-spring' 'my-app' 'com.example.myapp' '全栈应用' | npx create-wl-app create
+```
+
+### 🧬 全栈组合工程
+
+组合创建会生成结构完整、前后端真实联通、可一键启动的全栈工程：
+
+```
+my-app/
+├── apps/
+│   ├── web/                  # 前端模板原样装配（apps/web）
+│   └── api/                  # Spring Boot 后端（apps/api，openapi.yaml 为契约来源）
+├── docs/                     # 架构与开发说明
+├── scripts/                  # setup / dev / verify / doctor / api:generate 编排脚本
+├── cwa.config.json           # 机器可读工程清单（目录、端口、契约、命令）
+├── AGENTS.md                 # AI 协作规则
+└── package.json              # 根级命令入口
+```
+
+根级统一命令：
+
+| 命令 | 说明 |
+| --- | --- |
+| `pnpm run setup` | 环境门禁、冻结安装、生成随机密码 `.env`、生成 OpenAPI Client |
+| `pnpm run dev` | 启动 MySQL/Redis、Spring Boot 与前端开发服务器 |
+| `pnpm run verify` | 全栈验证：契约漂移、双端门禁、真实登录 E2E |
+| `pnpm run doctor` | 只读环境诊断（PASS/WARN/FAIL + 修复建议） |
+| `pnpm run api:generate` | 依据 `apps/api/openapi.yaml` 重新生成前端 Client |
+
+组合工程是**单一 Git 仓库**（子项目不携带嵌套 `.git`），前端类型与 Client 由后端契约自动生成，业务代码禁止手工编辑生成目录。详见「核心能力」文档：[脚手架核心](/core/脚手架核心)。
 
 ### ⏳ 步骤 4：等待模板下载
 

@@ -67,3 +67,9 @@ printf '%s\n' 'spring-boot' 'my-backend' 'com.mycompany.mybackend' '项目描述
 | CI | 生成冒烟测试 → 全量 verify → OCI 镜像 + SBOM |
 
 更多细节见仓库 [README](https://github.com/whyfail/springboot-template#readme)，模板演进记录见 [2026-09-18 升级日志](../log/2026-09-18.md)。
+
+## 🔗 前端组合与 CORS 白名单
+
+- 与四套前端模板共享同一套登录契约（见 `docs/frontend-integration.md`）；API 根路径 `/api/v1`，登录响应顶层 `token/tokenType/expiresAt/user`，错误为 Problem Details 顶层 `code/msg/requestId`。
+- CORS 白名单由 `APP_ALLOWED_ORIGINS` 控制（默认 `http://localhost:5173,http://localhost:3000`）；全栈组合工程由根级编排脚本按 Web 端口与 E2E preview 端口显式注入，无需手工维护。
+- 组合模式说明：`create-wl-app` 的四个全栈预设（`react-spring` / `vue-spring` / `next-spring` / `nuxt-spring`）将本模板装配到 `apps/api`，与前端 `apps/web` 组成单一 Git 仓库工程，根级 `pnpm run verify` 会以本模板的 openapi.yaml 为契约做漂移检查与真实登录 E2E。

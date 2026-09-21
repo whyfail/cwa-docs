@@ -158,3 +158,13 @@ pnpm run lint
 🎉 **立即使用create-wl-app，开启你的现代化React开发之旅！**
 
 🤖 AI 友好 | ⚡ 极致性能 | 🎨 现代 UI | 🔧 开发友好
+
+
+## 🔐 真实登录与契约
+
+React 模板已与配套后端 [springboot-template](https://github.com/whyfail/springboot-template) 形成真实登录闭环：
+
+- 登录请求 `POST /api/v1/login`（`username/password/remember`），响应顶层 `token/tokenType/expiresAt/user`；API 前缀固定 `/api/v1`，开发代理按 `/api` 直通转发。
+- API 类型与 Client 由后端 OpenAPI 3.1 契约生成（`pnpm run api:generate`，输出 `src/shared/api/generated`，禁止手工编辑）；契约快照位于 `openapi/api-contract.yaml`。
+- 错误统一读取 Problem Details 顶层 `code/msg/requestId`；登录接口的 401 由登录页展示后端 `msg`，不触发会话过期流程。
+- Mock 模式显式开启：`VITE_ENABLE_MOCK=true` 启用 MSW 浏览器 Mock（演示账号 `admin`/`admin`），生产构建保持关闭；模板 E2E 默认走 Mock，真实后端 E2E 用 `E2E_AUTH_MOCK=false` + `E2E_AUTH_USERNAME/E2E_AUTH_PASSWORD` 注入种子凭据。
