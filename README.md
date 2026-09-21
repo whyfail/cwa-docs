@@ -1,40 +1,85 @@
-# 简介
+<div align="center">
 
-- 不到一分钟即可创建好的一个基本前端项目模板
-- 文档站采用 React、Canvas 2D 与 CSS 3D 构建交互式演进时间线，Markdown 日志仍是唯一内容源
+# cwa-docs
 
-## 文档站开发
+**[cwa-stack](https://github.com/whyfail/cwa-stack) 官方文档站** —— 契约驱动 · 开箱即验证 · AI 原生
+
+[![npm version](https://img.shields.io/npm/v/cwa-stack.svg)](https://www.npmjs.com/package/cwa-stack)
+[![docs](https://img.shields.io/badge/docs-whyfail.github.io%2Fcwa--docs-blue)](https://whyfail.github.io/cwa-docs/)
+[![GitHub repo](https://img.shields.io/badge/GitHub-whyfail%2Fcwa--stack-blue)](https://github.com/whyfail/cwa-stack)
+[![license](https://img.shields.io/npm/l/cwa-stack.svg)](https://www.npmjs.com/package/cwa-stack)
+
+**一条命令，全栈成型。**
+
+</div>
+
+---
+
+这是 [cwa-stack](https://github.com/whyfail/cwa-stack)（原 create-wl-app）的官方文档与演进档案：React、Canvas 2D 与 CSS 3D 构建的**交互式演进时间线**，Markdown 是唯一内容源——每一篇升级日志都会自动成为时间线上的一个节点。
+
+## 📖 文档地图
+
+| 板块 | 内容 |
+| --- | --- |
+| [快速开始](https://whyfail.github.io/cwa-docs/#/docs/guide/quick-start) | 环境准备、独立创建与全栈组合、非交互与管道输入 |
+| [脚手架核心](https://whyfail.github.io/cwa-docs/#/docs/core/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%A0%B8%E5%BF%83) | 全栈组合、根级编排五命令、契约驱动、AI Agent 约定 |
+| [模板文档](https://whyfail.github.io/cwa-docs/#/docs/core/React%E6%A8%A1%E6%9D%BF) | React / Vue3 SPA、Next.js / Nuxt SSR、Spring Boot 后端逐一拆解 |
+| [升级日志](https://whyfail.github.io/cwa-docs/#/docs/log/2026-09-21) | 49 篇演进记录，从第一行代码到全栈引擎 |
+
+## ⚡ 一分钟体验 cwa-stack
 
 ```bash
+# 全栈组合：React/Vue/Next.js/Nuxt × Spring Boot，一条命令
+npx cwa-stack create my-app --preset react-spring --package com.example.myapp
+
+# 组合工程根级命令
+pnpm run setup     # 环境门禁 · 随机密码 .env · 契约生成 Client
+pnpm run dev       # MySQL/Redis + Spring Boot + 前端，一键就绪
+pnpm run verify    # 双端全部门禁 + 真实登录 E2E
+```
+
+## 🛠️ 文档站开发
+
+```bash
+git clone https://github.com/whyfail/cwa-docs.git
+cd cwa-docs
 npm install
-npm run dev
+npm run dev       # 本地开发（127.0.0.1）
+npm run build     # 生产构建输出到 dist/
+npm run preview   # 本地预览构建产物
 ```
 
-生产构建输出到 `dist`：
+技术栈：React 19 + Vite + markdown-it；环境要求 Node.js 24 LTS（`>=24.11.0 <25`）。
 
-```bash
-npm run build
-npm run preview
+## ✍️ 撰写升级日志
+
+日志是文档站的灵魂。在 `log/` 下新增 `YYYY-MM-DD.md`（首页 frontmatter 带 `title` 与 `sidebar_position`），构建时会**自动注册**到演进时间线，无需修改任何配置：
+
+```md
+# 2026-09-21
+
+## 更新概览
+
+- cwa-stack（v1.0.0）：npm 包由 create-wl-app 更名而来……
 ```
 
-## 环境准备
+核心能力文档在 `core/` 下维护；站点外壳（时间线、导航）由 `src/` 驱动，一般无需改动。
 
-1. 首先，请确保你的设备上已经安装了 [Git](https://git-scm.com/)。
-2. 接着，需要安装 [Node.js 24 LTS](https://nodejs.org)（Krypton，推荐最新 24.x）。四套模板的 `package.json` 运行范围为 `>=24.11.0 <25`。
-3. 安装完这两个环境后，你就可以开始创建项目了。
+## 🔗 相关仓库
 
-## 开始
+| 仓库 | 说明 |
+| --- | --- |
+| [whyfail/cwa-stack](https://github.com/whyfail/cwa-stack) | 脚手架本体（npm：cwa-stack） |
+| [whyfail/vite_react_init](https://github.com/whyfail/vite_react_init) | React SPA 模板 |
+| [whyfail/vite_vue3_init](https://github.com/whyfail/vite_vue3_init) | Vue 3 SPA 模板 |
+| [whyfail/vite_react_ssr_init](https://github.com/whyfail/vite_react_ssr_init) | Next.js SSR 模板 |
+| [whyfail/vite_vue3_ssr_init](https://github.com/whyfail/vite_vue3_ssr_init) | Nuxt SSR 模板 |
+| [whyfail/springboot-template](https://github.com/whyfail/springboot-template) | Spring Boot 后端模板 |
 
-1. 打开你想要创建项目的文件夹，并在此处打开终端。
-2. 在终端中输入 `npx cwa-stack create`，依次选择技术栈、应用类型和模板，再输入项目名称与项目描述。
-3. 下载选择的模板，通常只需要几秒钟就能完成，这里只下载模板，并没有下载依赖。
-4. 在终端中输入 `cd <项目名称>`，进入到项目文件夹中。
-5. 初始化一个 Git 仓库，使用 `git init` 命令，并添加和提交文件。
-6. 下载项目所需的依赖，使用 `pnpm install` 命令。
-7. 最后，输入 `code .` 命令，将会调用 Visual Studio Code 来打开这个项目。
+---
 
-当前支持 `vite-react`、`vite-vue3`、`next-react-ssr`、`nuxt-vue3-ssr` 四个模板。自动化场景也可通过标准输入依次传入模板标识、项目名称和可选描述：
+<div align="center">
 
-```bash
-printf '%s\n' 'next-react-ssr' 'my-app' 'Next.js SSR 项目' | npx cwa-stack create
-```
+🎉 **契约驱动 | 开箱即验证 | AI 原生**
+
+</div>
