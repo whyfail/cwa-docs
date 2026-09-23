@@ -7,6 +7,8 @@ import { generateSidebar } from "./sidebar.mjs";
 /** 线上固定地址（GitHub Pages，base 为 /cwa-docs/），canonical / og / sitemap / llms 共用 */
 const ORIGIN = "https://whyfail.github.io";
 const HOSTNAME = `${ORIGIN}/cwa-docs`;
+/** 构建基路径：CI（GitHub Pages）为 /cwa-docs/，本地 dev 为 /。head 里的链接 VitePress 不会自动补 base，须自行拼接 */
+const BASE = process.env.GITHUB_ACTIONS ? "/cwa-docs/" : "/";
 const SITE_NAME = "cwa-stack";
 const SITE_DESC = "cwa-stack 交互式升级日志与开发文档";
 
@@ -40,7 +42,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: SITE_NAME,
   description: SITE_DESC,
-  base: process.env.GITHUB_ACTIONS ? "/cwa-docs/" : "/",
+  base: BASE,
   /** vite.dev 风格：亮色为默认主题，用户手动切换后仍记忆在 localStorage（维护者推荐用法，见 vuejs/vitepress#3957） */
   appearance: {
     // @ts-expect-error initialValue 类型暂只声明了 'dark'，运行时与防闪烁内联脚本均支持 'light'
@@ -59,7 +61,7 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", type: "image/png", href: "/favicon.png" }],
+    ["link", { rel: "icon", type: "image/png", href: `${BASE}favicon.png` }],
     ["meta", { name: "theme-color", content: "#6c3bff" }],
     ["meta", { property: "og:site_name", content: `${SITE_NAME} Upgrade Log` }],
     ["meta", { property: "og:image", content: `${HOSTNAME}/logo.png` }],
