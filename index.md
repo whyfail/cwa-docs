@@ -1,6 +1,8 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+# 页签标题与 og:title 共用；默认模板会拼接为「AI 时代的全栈工程引擎 | cwa-stack」
+title: AI 时代的全栈工程引擎
 
 hero:
   name: cwa-stack

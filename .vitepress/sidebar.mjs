@@ -37,6 +37,9 @@ export function generateSidebar() {
   const guide = ["intro.md"].filter((rel) =>
     fs.existsSync(path.join(root, rel)),
   );
+  const skill = ["skill.md"].filter((rel) =>
+    fs.existsSync(path.join(root, rel)),
+  );
   const core = listMd("core").sort((a, b) => {
     const posA = Number(parseFrontmatter(fs.readFileSync(path.join(root, a), "utf8")).meta.sidebar_position || 99);
     const posB = Number(parseFrontmatter(fs.readFileSync(path.join(root, b), "utf8")).meta.sidebar_position || 99);
@@ -55,6 +58,10 @@ export function generateSidebar() {
 
   if (guide.length) {
     sidebar["/intro"] = [{ text: "快速开始", items: guide.map((rel) => ({ text: docTitle(rel), link: `/${rel.replace(/\.md$/, "")}` })) }];
+  }
+
+  if (skill.length) {
+    sidebar["/skill"] = [{ text: "Skill", items: skill.map((rel) => ({ text: docTitle(rel), link: `/${rel.replace(/\.md$/, "")}` })) }];
   }
 
   if (core.length) {

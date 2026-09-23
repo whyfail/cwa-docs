@@ -59,7 +59,7 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "icon", type: "image/png", href: "/favicon.png" }],
     ["meta", { name: "theme-color", content: "#6c3bff" }],
     ["meta", { property: "og:site_name", content: `${SITE_NAME} Upgrade Log` }],
     ["meta", { property: "og:image", content: `${HOSTNAME}/logo.png` }],
@@ -189,6 +189,7 @@ export default defineConfig({
     },
     nav: [
       { text: "快速开始", link: "/intro" },
+      { text: "Skill", link: "/skill" },
       { text: "模板文档", link: "/core/脚手架核心" },
       { text: "升级日志", link: "/archive" },
       { text: "GitHub", link: "https://github.com/whyfail/cwa-stack" },

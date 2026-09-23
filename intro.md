@@ -8,16 +8,16 @@ keywords: [cwa-stack, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端
 
 ## 🚀 什么是 cwa-stack？
 
-cwa-stack 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown、Next.js 与 Nuxt 模板，旨在为开发者提供**极速、便捷、开箱即用**的项目创建体验。
+cwa-stack（CWA = Create Whole-stack App）是一款**现代化全栈工程引擎**：一条命令生成前后端真实联通、可登录、可验证的企业级工程。提供 Vite 8 + Rolldown、Next.js 与 Nuxt 四套前端模板和 Spring Boot 4 后端模板，以及一次生成的全栈组合预设，依旧保持**极速、便捷、开箱即用**的创建体验。
 
 ### ✨ 核心优势
 
-- ⚡ **极速构建**：基于 Rust 驱动的 Vite 8 + Rolldown，构建速度提升 15 倍
+- ⚡ **极速构建**：基于 Rust 驱动的 Vite 8 + Rolldown，构建速度提升 10x+
 - 📦 **开箱即用**：内置完整项目结构，无需复杂配置
-- 🎨 **四套模板**：支持 React、Vue 3 的 SPA 与 SSR 项目，覆盖 Vite、Next.js 和 Nuxt
+- 🎨 **五套模板 + 四种全栈预设**：React、Vue 3 的 SPA 与 SSR（Vite、Next.js、Nuxt）与 Spring Boot 4 后端，全栈组合一次生成
 - 🧩 **TypeScript 优先**：React 与 Vue3 模板均已内置 TypeScript 配置
 - 🔧 **开发友好**：集成 ESLint、Git 钩子、开发工具等
-- 🤖 **AI 友好**：模板内置清晰目录边界和 AGENTS.md 约定，方便 AI Agent 协作开发
+- 🤖 **AI 友好**：模板内置清晰目录边界和 AGENTS.md 约定，随包发布 [create-app 技能](/skill)，AI Agent 一句话创建项目
 
 ## 📋 环境准备
 
@@ -30,23 +30,31 @@ cwa-stack 是一款**现代化前端脚手架**，提供 Vite 8 + Rolldown、Nex
    - 验证方式：`git --version`
 
 2. **Node.js** - JavaScript 运行时
-   - 四套模板统一使用 Node.js 24 LTS（Krypton，推荐最新 24.x）
+   - 模板统一使用 Node.js 24 LTS（Krypton，推荐最新 24.x）
    - `package.json` 支持范围：`>=24.11.0 <25`
    - 直接下载node地址：[https://nodejs.org](https://nodejs.org)
    - 或使用 **nvm-desktop** 管理 Node.js 版本（推荐）
    - 下载地址: [nvm-desktop](https://github.com/1111mp/nvm-desktop)
    - 验证方式：`node --version`
 
-### 🎯 推荐工具
+3. **pnpm** - 包管理器（模板通过 `preinstall` 钩子强制使用 pnpm，推荐 11.x）
+   - 安装：`npm install -g pnpm@11`
+   - 验证方式：`pnpm --version`
 
-- **Trae** - 智能 IDE (字节出品)
-  - 下载地址：[国内版](https://www.trae.cn/)
-  - 或 [国际版](https://trae.ai/)
-  - 验证方式：`trae --version`
+4. **Java 25 + Docker** - 仅 `spring-boot` 后端与全栈组合工程需要
+   - 验证方式：`java --version`、`docker --version`
 
-- **Visual Studio Code** - 现代化代码编辑器
-  - 下载地址：[https://code.visualstudio.com/](https://code.visualstudio.com/)
-  - 推荐插件：ESLint、Tailwind CSS IntelliSense、Volar（Vue 开发）
+### 🎯 推荐AI工具
+
+- **高配**：Codex + GPT 6 Sol
+  - OpenAI 出品的 AI 编程智能体，提供 CLI 与桌面应用，适合复杂工程的规划与编码
+  - 安装引导：[Codex 下载安装指南（Windows / macOS 官方版）](https://blog.csdn.net/weixin_44733660/article/details/161521752)
+
+- **低配**：ZCode + GLM-5.3-Flash
+  - 智谱（Z.ai）官方 AI 编程工作台，与 GLM 模型深度绑定，提供桌面应用、浏览器工作台与终端 TUI 多种形态
+  - 下载地址：[ZCode 官网](https://zcode.z.ai)
+
+> 两个工具均可安装随包发布的 [create-app 技能](/skill)——对 Agent 说「用 cwa-stack 创建一个全栈项目」即可一句话创建。
 
 ## 🎉 开始创建项目
 
@@ -208,6 +216,8 @@ git commit -m "feat: 初始化项目"
 pnpm install
 ```
 
+> 全栈组合工程无需手动 `pnpm install`：进入项目后执行 `pnpm run setup`，一次完成环境门禁、冻结安装、生成随机密码 `.env` 与 OpenAPI Client（需要 Java 25 与 Docker）。
+
 ### 🚀 步骤 8：启动开发服务器
 
 ```bash
@@ -220,6 +230,8 @@ pnpm run dev
 # React SSR / Vue 3 SSR 模板
 pnpm run dev
 ```
+
+全栈组合工程使用 `pnpm run dev` 一键启动（compose 拉起 MySQL/Redis、Spring Boot 与前端开发服务器），并用 `pnpm run verify` 做全栈验证；`spring-boot` 独立后端需先 `cp .env.example .env` 填入密码，再执行 `docker compose up -d --build` 启动。
 
 ### 🏗️ 步骤 9：构建生产版本
 
@@ -241,9 +253,11 @@ my-awesome-app/
 │   ├── features/      # 业务功能模块，如 auth、docs
 │   ├── shared/        # 跨业务基础能力，如 ui、api、lib、config
 │   ├── assets/        # 静态资源
+│   ├── test/          # 测试 setup 与工具
 │   ├── utils/         # 独立工具函数
 │   ├── main.tsx       # 入口文件
 │   └── vite-env.d.ts  # Vite 类型声明
+├── .agents/skills/    # AI Agent 项目技能
 ├── AGENTS.md          # AI 协作规则
 ├── components.json    # shadcn/ui 配置
 ├── eslint.config.mjs  # ESLint 配置
@@ -260,6 +274,7 @@ my-awesome-app/
 │   ├── app/           # 应用装配、路由、通知、导航、全局样式
 │   ├── features/      # 业务功能模块，如 auth、docs
 │   ├── shared/        # 跨业务基础能力，如 ui、api、lib、config
+│   ├── test/          # 测试 setup 与工具
 │   ├── main.ts        # 入口文件
 │   ├── vite-env.d.ts  # Vite 类型声明
 │   └── vue-router-meta.d.ts # 路由 meta 类型声明
@@ -331,7 +346,7 @@ my-awesome-app/
 
 ## 🚀 下一步
 
-恭喜你！你已经成功创建了一个使用 cwa-stack 的现代化前端项目。
+恭喜你！你已经成功创建了一个使用 cwa-stack 的现代化项目。
 
 ### 🌟 推荐阅读
 
@@ -342,6 +357,7 @@ my-awesome-app/
 - [⚛️ React SSR 模板](/core/ReactSSR模板.md) - 使用 Next.js App Router 模板
 - [🟢 Vue 3 SSR 模板](/core/Vue3SSR模板.md) - 使用 Nuxt 4 模板
 - [📖 Vite 8.0 新特性](/log/2026-01-22.md) - 了解 Vite 8.0 + Rolldown 的强大功能
+- [🤖 Skill](/skill) - 安装 create-app 技能，让 Codex / ZCode 一句话创建项目
 
 ### 🤝 社区支持
 
