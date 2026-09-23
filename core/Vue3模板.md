@@ -1,8 +1,15 @@
 ---
 sidebar_position: 4
 keywords: [cwa-stack, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
+title: "Vue3 模板 —— 为 AI 而生的企业级项目模板"
+description: "✅ AI 友好 - 内置 AGENTS.md、docs 模块和 shadcn-vue skill，方便 AI Agent 快速理解项目边界 ✅ 企业级分层 - app、features、shared 分层清晰，默认避免业务代码散落..."
+category: "VUE ECOSYSTEM"
+kicker: "VUE TEMPLATE EVOLUTION"
+accent: "#7ef2d6"
+impact: "Vue 模板持续跟进生态能力，同时保持稳定的开发约定。"
+readingTime: 7
+visual: "perceptron"
 ---
-
 # 🚀 Vue3 模板 —— 为 AI 而生的企业级项目模板
 
 [![小磊丶同学/vite_vue3_init](https://gitee.com/whyfail/vite_vue3_init/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/whyfail/vite_vue3_init)

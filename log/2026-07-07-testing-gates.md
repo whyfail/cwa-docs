@@ -1,3 +1,15 @@
+---
+title: "2026-07-07 测试质量门禁升级"
+description: "React 模板和 Vue3 模板同步补齐企业级测试基础设施：Vitest、覆盖率门禁、组件测试守卫、MSW、无障碍测试、Playwright E2E 和 GitHub Actions CI。 README.md 与 AGENTS..."
+keywords: ["Vite","React","Vue","ESLint","Vitest","Playwright","2026-07-07 测试质量门禁升级","2026-07-07"]
+category: "QUALITY GATES"
+kicker: "VERIFY BEFORE SHIP"
+accent: "#bfffee"
+impact: "变更被更稳定的自动化验证覆盖，模板升级的回归风险随之降低。"
+readingTime: 8
+date: "2026-07-07"
+visual: "test"
+---
 # 2026-07-07 测试质量门禁升级
 
 ## 更新概览

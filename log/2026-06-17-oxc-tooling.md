@@ -1,3 +1,15 @@
+---
+title: "2026-06-17 Oxlint / Oxfmt 工具链改造"
+description: "Vue3 模板将代码检查工具从 ESLint 切换为 Oxlint，将格式化能力独立为 Oxfmt。 新增 .oxlintrc.json 和 .oxfmtrc.json，删除旧的 eslint.config.mjs。 pnpm l..."
+keywords: ["Vite","Oxc","Vue","TypeScript","ESLint","2026-06-17 Oxlint / Oxfmt 工具链改造","2026-06-17"]
+category: "AI / DEVEX"
+kicker: "INTELLIGENT WORKFLOW"
+accent: "#efffa1"
+impact: "开发流程开始具备面向 AI Agent 的上下文、工具和协作边界。"
+readingTime: 4
+date: "2026-06-17"
+visual: "neuron"
+---
 # 2026-06-17 Oxlint / Oxfmt 工具链改造
 
 ## 更新概览

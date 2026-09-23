@@ -1,14 +1,9 @@
-# 构建 React 交互式文档站并部署到 GitHub Pages
-#
-name: Deploy CWA experience to Pages
+# 构建 VitePress 文档站并部署到 GitHub Pages
+name: Deploy CWA docs to Pages
 
 on:
-  # 在针对 `main` 分支的推送上运行。如果你
-  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
     branches: [master]
-
-  # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
@@ -18,39 +13,38 @@ permissions:
   id-token: write
 
 # 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
-# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
-      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+          fetch-depth: 0 # lastUpdated 依赖 git 时间戳
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm # 或 pnpm / yarn
+          node-version: 24
+          cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: npm i # 或 pnpm install / yarn install / bun install
-      - name: Build interactive documentation
-        run: npm run build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+        run: npm ci
+      - name: Enrich frontmatter check
+        run: node scripts/enrich-frontmatter.mjs --check
+      - name: Build documentation
+        run: npm run build
+      - name: SEO check
+        run: node scripts/check-seo.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: .vitepress/dist
 
-  # 部署工作
   deploy:
     environment:
       name: github-pages

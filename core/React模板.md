@@ -1,8 +1,15 @@
 ---
 sidebar_position: 3
 keywords: [cwa-stack, 开箱即用, 脚手架, vite, React, Vue3, 前端, 前端框架, 前端开发, 前端开发工具]
+title: "React 模板 —— 为 AI 而生的企业级项目模板"
+description: "✅ AI 友好 - 内置 AGENTS.md 与 docs 入口，方便 AI Agent 快速理解项目边界 ✅ 企业级分层 - app、features、shared 分层清晰，默认避免业务代码散落 ⚡ 极致性能 - 基于 Vit..."
+category: "REACT ECOSYSTEM"
+kicker: "REACT TEMPLATE EVOLUTION"
+accent: "#ff8eb9"
+impact: "React 模板的状态、组件与工程边界得到持续更新。"
+readingTime: 6
+visual: "backprop"
 ---
-
 # 🚀 React 模板 —— 为 AI 而生的企业级项目模板
 
 [![小磊丶同学/vite_react_init](https://gitee.com/whyfail/vite_react_init/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/whyfail/vite_react_init)

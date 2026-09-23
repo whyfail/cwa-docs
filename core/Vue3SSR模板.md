@@ -1,8 +1,15 @@
 ---
 sidebar_position: 7
 keywords: [cwa-stack, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
+title: "Vue 3 SSR 模板 —— Nuxt 企业级基线"
+description: "nuxt-vue3-ssr 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。 SSR 默认..."
+category: "ARCHITECTURE"
+kicker: "CLIENT / SERVER SYSTEM"
+accent: "#b99cff"
+impact: "脚手架从 SPA 扩展到客户端与服务端协同的企业级应用架构。"
+readingTime: 4
+visual: "attention"
 ---
-
 # Vue 3 SSR 模板 —— Nuxt 企业级基线
 
 `nuxt-vue3-ssr` 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。

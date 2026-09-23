@@ -1,8 +1,15 @@
 ---
 sidebar_position: 5
 keywords: [cwa-stack, SSR, Next.js, Nuxt, React, Vue3, 企业级模板, 前端脚手架]
+title: "SSR 模板 —— Next.js 与 Nuxt 企业级基线"
+description: "cwa-stack 新增两个独立 SSR 模板： next-react-ssr：基于 Next.js App Router、React 19、TypeScript、Tailwind CSS 4。 nuxt-vue3-ssr：基于 ..."
+category: "ARCHITECTURE"
+kicker: "CLIENT / SERVER SYSTEM"
+accent: "#b99cff"
+impact: "脚手架从 SPA 扩展到客户端与服务端协同的企业级应用架构。"
+readingTime: 3
+visual: "attention"
 ---
-
 # 🚀 SSR 模板 —— Next.js 与 Nuxt 企业级基线
 
 cwa-stack 新增两个独立 SSR 模板：

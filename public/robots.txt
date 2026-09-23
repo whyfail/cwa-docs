@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://whyfail.github.io/cwa-docs/sitemap.xml

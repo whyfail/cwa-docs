@@ -1,3 +1,15 @@
+---
+title: "2026-07-08 SSR 企业级模板新增"
+description: "新增 next-react-ssr 模板：基于 Next.js App Router、React 19、TypeScript、Tailwind CSS 4，面向 Node SSR 部署。 新增 nuxt-vue3-ssr 模板：基..."
+keywords: ["Vite","React","Vue","Pinia","Next.js","Nuxt","SSR","TypeScript","Vitest","Playwright","2026-07-08 SSR 企业级模板新增","2026-07-08"]
+category: "ARCHITECTURE"
+kicker: "CLIENT / SERVER SYSTEM"
+accent: "#b99cff"
+impact: "脚手架从 SPA 扩展到客户端与服务端协同的企业级应用架构。"
+readingTime: 5
+date: "2026-07-08"
+visual: "attention"
+---
 # 2026-07-08 SSR 企业级模板新增
 
 ## 更新概览

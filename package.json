@@ -4,22 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
-  },
-  "dependencies": {
-    "@fontsource/ibm-plex-mono": "^5.2.7",
-    "@fontsource/space-grotesk": "^5.2.10",
-    "highlight.js": "^11.11.1",
-    "lucide-react": "^0.468.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview .",
+    "enrich": "node scripts/enrich-frontmatter.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "5.0.4",
-    "vite": "6.4.2"
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-rss": "^0.4.5"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0"
   }
 }

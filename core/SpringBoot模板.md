@@ -1,8 +1,15 @@
 ---
 sidebar_position: 8
 keywords: [cwa-stack, spring-boot, Spring Boot, Java 25, 后端模板, 企业级, 后端开发, 后端框架, 微服务, 单体架构]
+title: "Spring Boot 模板 —— 为 AI 而生的企业级后端模板"
+description: "✅ AI 友好 - 内置 AGENTS.md 工程规则，架构边界、安全红线与验证命令写进项目本身 ✅ 模块化单体 - auth / user / authorization / audit / shared 业务域分层，域内保留 ..."
+category: "SPRING ECOSYSTEM"
+kicker: "JAVA BACKEND TEMPLATE"
+accent: "#6db33f"
+impact: "脚手架从纯前端扩展到前后端一体的企业级模板体系，Java 后端纳入同一套生成与质量门禁。"
+readingTime: 5
+visual: "scaling"
 ---
-
 # 🚀 Spring Boot 模板 —— 为 AI 而生的企业级后端模板
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/whyfail/springboot-template?style=social)](https://github.com/whyfail/springboot-template)

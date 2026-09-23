@@ -15,16 +15,16 @@
 
 ---
 
-这是 [cwa-stack](https://github.com/whyfail/cwa-stack)（原 create-wl-app）的官方文档与演进档案：React、Canvas 2D 与 CSS 3D 构建的**交互式演进时间线**，Markdown 是唯一内容源——每一篇升级日志都会自动成为时间线上的一个节点。
+这是 [cwa-stack](https://github.com/whyfail/cwa-stack)（原 create-wl-app）的官方文档与升级日志：VitePress 静态站点，Markdown 是唯一内容源——每一篇升级日志都会自动进入列表、侧边栏、sitemap、RSS 与 `llms.txt` 中的一个节点。
 
 ## 📖 文档地图
 
 | 板块 | 内容 |
 | --- | --- |
-| [快速开始](https://whyfail.github.io/cwa-docs/#/docs/guide/quick-start) | 环境准备、独立创建与全栈组合、非交互与管道输入 |
-| [脚手架核心](https://whyfail.github.io/cwa-docs/#/docs/core/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%A0%B8%E5%BF%83) | 全栈组合、根级编排五命令、契约驱动、AI Agent 约定 |
-| [模板文档](https://whyfail.github.io/cwa-docs/#/docs/core/React%E6%A8%A1%E6%9D%BF) | React / Vue3 SPA、Next.js / Nuxt SSR、Spring Boot 后端逐一拆解 |
-| [升级日志](https://whyfail.github.io/cwa-docs/#/docs/log/2026-09-21) | 49 篇演进记录，从第一行代码到全栈引擎 |
+| [快速开始](https://whyfail.github.io/cwa-docs/intro) | 环境准备、独立创建与全栈组合、非交互与管道输入 |
+| [脚手架核心](https://whyfail.github.io/cwa-docs/core/%E8%84%9A%E6%89%8B%E6%9E%B6%E6%A0%B8%E5%BF%83) | 全栈组合、根级编排五命令、契约驱动、AI Agent 约定 |
+| [模板文档](https://whyfail.github.io/cwa-docs/core/React%E6%A8%A1%E6%9D%BF) | React / Vue3 SPA、Next.js / Nuxt SSR、Spring Boot 后端逐一拆解 |
+| [升级日志](https://whyfail.github.io/cwa-docs/archive) | 50 篇升级日志按时间倒序，从第一行代码到全栈引擎 |
 
 ## ⚡ 一分钟体验 cwa-stack
 
@@ -44,16 +44,18 @@ pnpm run verify    # 双端全部门禁 + 真实登录 E2E
 git clone https://github.com/whyfail/cwa-docs.git
 cd cwa-docs
 npm install
-npm run dev       # 本地开发（127.0.0.1）
-npm run build     # 生产构建输出到 dist/
-npm run preview   # 本地预览构建产物
+npm run dev          # 本地开发（127.0.0.1:5173）
+npm run build        # 生产构建输出到 .vitepress/dist/
+npm run preview      # 本地预览构建产物
+npm run enrich       # 把标题/摘要/分类等物化回 log/、core/ frontmatter（幂等）
+npm run check:seo    # 构建后 GEO 验收（title/canonical/OG/JSON-LD/sitemap/RSS/llms）
 ```
 
-技术栈：React 19 + Vite + markdown-it；环境要求 Node.js 24 LTS（`>=24.11.0 <25`）。
+技术栈：VitePress 1.6（SSG + 本地中文分词搜索）；环境要求 Node.js 24 LTS（`>=24.11.0 <25`）。部署由 GitHub Actions 完成，构建后自动跑 `enrich --check` 与 `check:seo` 两道门禁。
 
 ## ✍️ 撰写升级日志
 
-日志是文档站的灵魂。在 `log/` 下新增 `YYYY-MM-DD.md`（首页 frontmatter 带 `title` 与 `sidebar_position`），构建时会**自动注册**到演进时间线，无需修改任何配置：
+日志是文档站的灵魂。在 `log/` 下新增 `YYYY-MM-DD.md`，然后运行 `npm run enrich` 补全 `title` / `description` / `category` 等 frontmatter——时间线、侧边栏、sitemap、RSS、`llms.txt` 会**自动收录**，无需修改任何配置：
 
 ```md
 # 2026-09-21
@@ -63,7 +65,7 @@ npm run preview   # 本地预览构建产物
 - cwa-stack（v1.0.0）：npm 包由 create-wl-app 更名而来……
 ```
 
-核心能力文档在 `core/` 下维护；站点外壳（时间线、导航）由 `src/` 驱动，一般无需改动。
+核心能力文档在 `core/` 下维护；站点外壳（时间线、导航、主题）在 `.vitepress/` 下维护，一般无需改动。
 
 ## 🔗 相关仓库
 
