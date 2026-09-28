@@ -2,7 +2,7 @@
 sidebar_position: 6
 keywords: [cwa-stack, React, SSR, Next.js, App Router, TypeScript, Tailwind CSS]
 title: "React SSR 模板 —— Next.js 企业级基线"
-description: "next-react-ssr 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.5 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Nod..."
+description: "next-react-ssr 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.6 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Nod..."
 category: "ARCHITECTURE"
 kicker: "CLIENT / SERVER SYSTEM"
 accent: "#b99cff"
@@ -12,7 +12,7 @@ visual: "attention"
 ---
 # React SSR 模板 —— Next.js 企业级基线
 
-`next-react-ssr` 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.5 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`next-react-ssr` 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.6 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -27,7 +27,7 @@ visual: "attention"
 
 | 分类 | 方案 |
 | --- | --- |
-| SSR 框架 | Next.js 16.3.5 App Router |
+| SSR 框架 | Next.js 16.3.6 App Router |
 | UI 框架 | React 19.3 |
 | 开发语言 | TypeScript |
 | 状态管理 | Zustand |

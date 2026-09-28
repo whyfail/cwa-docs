@@ -2,7 +2,7 @@
 sidebar_position: 7
 keywords: [cwa-stack, Vue3, SSR, Nuxt, Pinia, TypeScript, Tailwind CSS]
 title: "Vue 3 SSR 模板 —— Nuxt 企业级基线"
-description: "nuxt-vue3-ssr 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。 SSR 默认..."
+description: "nuxt-vue3-ssr 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.43，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。 SSR 默认..."
 category: "ARCHITECTURE"
 kicker: "CLIENT / SERVER SYSTEM"
 accent: "#b99cff"
@@ -12,7 +12,7 @@ visual: "attention"
 ---
 # Vue 3 SSR 模板 —— Nuxt 企业级基线
 
-`nuxt-vue3-ssr` 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.42，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`nuxt-vue3-ssr` 是 cwa-stack 的 Vue 服务端渲染模板。它基于 Nuxt 4.5.2 与 Vue 3.5.43，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -29,7 +29,7 @@ visual: "attention"
 | 分类 | 方案 |
 | --- | --- |
 | SSR 框架 | Nuxt 4.5.2 |
-| UI 框架 | Vue 3.5.42 |
+| UI 框架 | Vue 3.5.43 |
 | 开发语言 | TypeScript |
 | 状态管理 | Pinia 4.0.3、@pinia/nuxt 1.0.2 |
 | UI 与样式 | shadcn-vue、reka-ui、Tailwind CSS 4、Sass |
