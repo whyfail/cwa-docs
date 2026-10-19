@@ -2,7 +2,7 @@
 sidebar_position: 6
 keywords: [cwa-stack, React, SSR, Next.js, App Router, TypeScript, Tailwind CSS]
 title: "React SSR 模板 —— Next.js 企业级基线"
-description: "next-react-ssr 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.6 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Nod..."
+description: "next-react-ssr 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.4.0 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Nod..."
 category: "ARCHITECTURE"
 kicker: "CLIENT / SERVER SYSTEM"
 accent: "#b99cff"
@@ -12,7 +12,7 @@ visual: "attention"
 ---
 # React SSR 模板 —— Next.js 企业级基线
 
-`next-react-ssr` 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.3.6 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
+`next-react-ssr` 是 cwa-stack 的 React 服务端渲染模板。它基于 Next.js 16.4.0 App Router 与 React 19.3，适合需要首屏 HTML、SEO、服务端请求上下文或 Node.js 部署的项目。
 
 ## 核心能力
 
@@ -27,14 +27,16 @@ visual: "attention"
 
 | 分类 | 方案 |
 | --- | --- |
-| SSR 框架 | Next.js 16.3.6 App Router |
+| SSR 框架 | Next.js 16.4.0 App Router |
 | UI 框架 | React 19.3 |
 | 开发语言 | TypeScript |
 | 状态管理 | Zustand |
 | UI 与样式 | shadcn/ui、Radix UI、Tailwind CSS 4、Sass |
 | API | Axios |
 | 测试 | Vitest、Testing Library、MSW、jest-axe、Playwright |
-| 工程规范 | Next.js 官方 ESLint flat config、oxfmt、commitlint、simple-git-hooks |
+| 工程规范 | ESLint 10.13.0、Next.js 官方 flat config、oxfmt、commitlint、simple-git-hooks |
+
+ESLint 10 依赖 `eslint-config-next@16.4.0` 起提供的官方兼容处理。模板在 `pnpm-workspace.yaml` 中为 `eslint-plugin-react@7.37.5`、`eslint-plugin-import@2.32.0`、`eslint-plugin-jsx-a11y@6.10.2` 修正 ESLint peer 范围；升级插件后应重新验证并在上游声明支持时移除对应修正。依赖变更后执行 `pnpm peers check` 与 `pnpm lint`，详见 [Next.js 官方说明](https://nextjs.org/docs/app/guides/upgrading/version-16#installation-fails-after-upgrading-eslint)。
 
 ## 快速开始
 
